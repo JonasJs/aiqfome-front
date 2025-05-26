@@ -11,4 +11,5 @@ export interface TextProps extends TextVariantProps {
   as?: AsTags;
   children: ReactNode;
   color?: PrefixedColor<'text'>;
+  className?: string;
 }

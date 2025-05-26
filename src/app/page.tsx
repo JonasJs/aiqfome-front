@@ -1,8 +1,28 @@
-import { Text } from '@/components';
+import { Button, Text } from '@/components';
 
 export default function Home() {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-background">
+      <div className="space-y-3">
+        <Button size="large">ir para pagamento</Button>
+        <Button size="medium">ir para pagamento</Button>
+        <Button size="medium" variant="outline">
+          ir para pagamento
+        </Button>
+        <Button disabled size="medium">
+          ir para pagamento
+        </Button>
+        <Button variant="outline" size="xsmall">
+          ir para pagamento
+        </Button>
+        <Button variant="text" size="xsmall">
+          ir para pagamento
+        </Button>
+        <Button size="xsmall" variant="text" color="text-neutral-500">
+          ir para pagamento
+        </Button>
+      </div>
+
       <Text as="h1" color="text-primary">
         Exemplo 1
       </Text>

@@ -1,6 +1,8 @@
 export const colorsLight = {
   primary: '#7B1FA2',
+  'primary-400': '#944AB4',
 
+  white: '#FFFFFF',
   background: '#FFFFFF',
 
   'neutral-50': '#F5F6F9',
