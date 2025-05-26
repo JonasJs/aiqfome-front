@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { themes } from './src/theme/theme';
 
 export default {
   content: [
@@ -7,12 +8,13 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
+    colors: {
+      ...themes.light.colors,
     },
+    fontFamily: {
+      nunito: ['var(--font-nunito)'],
+    },
+    extend: {},
   },
   plugins: [],
 } satisfies Config;

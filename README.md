@@ -1,3 +1,6 @@
+## README em construção
+
+
 - Tecnologias usadas:
   - NextJS
   - TailwindCSS
@@ -6,14 +9,14 @@
   - Lint-staged
   - Eslint
   - Prettier
+  - Commitlint
+  - Tawilwind variants
 
 
 
-  OBS: 
+  OBS: Escolhar tomadas
   - Não configurei para deletar as branches depois de serem mergeadas, para que seja possivel olhei minha estrutura.
-
-
-
+  - Poderia separar uma branch de develop ou até mesmo fazer branch de release e separar pensando em grupo de tarefas que entregue valor para o lciente, mas pensando em otimizar o tempo do desafio optei por fazer os PR direto na main.
   
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
