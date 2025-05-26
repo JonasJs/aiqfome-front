@@ -7,6 +7,15 @@
   - Eslint
   - Prettier
 
+
+
+  OBS: 
+  - Não configurei para deletar as branches depois de serem mergeadas, para que seja possivel olhei minha estrutura.
+
+
+
+  
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
