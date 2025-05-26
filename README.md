@@ -1,6 +1,5 @@
 ## README em construção
 
-
 - Tecnologias usadas:
   - NextJS
   - TailwindCSS
@@ -17,6 +16,7 @@
   OBS: Escolhar tomadas
   - Não configurei para deletar as branches depois de serem mergeadas, para que seja possivel olhei minha estrutura.
   - Poderia separar uma branch de develop ou até mesmo fazer branch de release e separar pensando em grupo de tarefas que entregue valor para o lciente, mas pensando em otimizar o tempo do desafio optei por fazer os PR direto na main.
+  - Poderia usar o lucide por exmeplo como lib de icons mas preferir fazer do zero para explorar mais do meu conhecimento e possam da uma olhada em como eu organizos pensando em um Design System proprio
   
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).

@@ -1,8 +1,18 @@
-import { Button, Text } from '@/components';
+import { Brand, Button, DeliveryType, Icon, Text } from '@/components';
 
 export default function Home() {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-background">
+      <Brand size={32} variant="icon" />
+      <Brand size={64} />
+      <Brand size={130} variant="wordmark" />
+
+      <DeliveryType type="aiq-delivery"></DeliveryType>
+      <DeliveryType color="neutral-100" type="no-delivery"></DeliveryType>
+      <DeliveryType type="pickup"></DeliveryType>
+      <DeliveryType color="neutral-100" type="store-delivery"></DeliveryType>
+
+      <Icon name="user" color="primary" />
       <div className="space-y-3">
         <Button size="large">ir para pagamento</Button>
         <Button size="medium">ir para pagamento</Button>

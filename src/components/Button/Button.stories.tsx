@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { colorsLight } from '@/theme/tokens/colors/colors.light';
 
 import { Button, buttonVariants } from './Button';
+import { colorsKeys } from '@/theme/theme';
 
-const textColorOptions = Object.keys(colorsLight).map((c) => `text-${c}`);
+const textColorOptions = colorsKeys.map((c) => `text-${c}`);
 
 const meta: Meta<typeof Button> = {
   component: Button,
