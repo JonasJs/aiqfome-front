@@ -15,10 +15,6 @@ const eslintConfig = [
     plugins: {
       prettier: prettierPlugin,
     },
-    rules: {
-      semi: ['error', 'always'],
-      'prettier/prettier': 'error',
-    },
   },
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
 ];
