@@ -4,7 +4,7 @@ import { colorsLight } from '@/theme/tokens/colors/colors.light';
 
 const textColorOptions = Object.keys(colorsLight).map((c) => `text-${c}`);
 
-const meta = {
+const meta: Meta<typeof Text> = {
   component: Text,
   title: 'Components/Text',
   parameters: {
@@ -12,16 +12,20 @@ const meta = {
   },
   argTypes: {
     variant: {
-      description: 'Variante de texto',
+      description: 'Text variant',
       table: {
-        defaultValue: { summary: 'ParagraphMedium' },
-        type: { summary: 'string' },
+        defaultValue: {
+          summary: 'ParagraphMedium',
+        },
+        type: {
+          summary: 'string',
+        },
       },
       control: 'select',
       options: Object.keys(textVariants.variants.variant),
     },
     color: {
-      description: 'Cor do texto baseada no tema',
+      description: 'Text color (from theme)',
       table: {
         defaultValue: {
           summary: 'text-neutral-500',
@@ -29,42 +33,48 @@ const meta = {
         type: {
           summary: 'ColorName',
         },
-        options: Object.keys(textVariants.variants.weight),
       },
       control: 'select',
       options: textColorOptions,
     },
     weight: {
-      description: 'Peso da fonte',
+      description: 'Font weight',
       table: {
         defaultValue: { summary: 'normal' },
-        type: { summary: 'string' },
+        type: {
+          summary: 'string',
+        },
       },
       control: 'select',
-      options: ['normal', 'semibold', 'bold'],
+      options: Object.keys(textVariants.variants.weight),
     },
     as: {
-      description: 'Tag HTML a ser renderizada',
+      description: 'HTML tag to render',
       table: {
-        defaultValue: { summary: 'p' },
-        type: { summary: 'AsTags' },
+        defaultValue: {
+          summary: 'p',
+        },
+        type: {
+          summary: 'AsTags',
+        },
       },
       control: 'select',
       options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'label', 'p', 'span'],
     },
     children: {
-      description: 'Conteúdo do texto',
+      description: 'Text content',
       table: {
-        type: { summary: 'ReactNode' },
+        type: {
+          summary: 'ReactNode',
+        },
       },
       control: 'text',
     },
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Text>;
+};
 
 export default meta;
-
 type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {

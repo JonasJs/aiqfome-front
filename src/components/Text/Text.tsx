@@ -13,6 +13,7 @@ export const textVariants = tv({
       ParagraphLarge: 'text-lg',
       ParagraphMedium: 'text-base',
       ParagraphSmall: 'text-sm',
+      ParagraphCapiton: 'text-xs',
     },
     weight: {
       normal: 'font-normal',
@@ -39,13 +40,14 @@ export function Text({
   variant,
   weight,
   color = 'text-neutral-500',
+  className,
 }: TextProps) {
   return (
     <Component
       className={textVariants({
         variant,
         weight,
-        class: color,
+        class: `${color} ${className}`,
       })}
     >
       {children}
