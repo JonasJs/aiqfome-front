@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Text, textVariants } from './Text';
-import { colorsLight } from '@/theme/tokens/colors/colors.light';
+import { colorsKeys } from '@/theme/theme';
 
-const textColorOptions = Object.keys(colorsLight).map((c) => `text-${c}`);
+const textColorOptions = colorsKeys.map((c) => `text-${c}`);
 
 const meta: Meta<typeof Text> = {
   component: Text,
