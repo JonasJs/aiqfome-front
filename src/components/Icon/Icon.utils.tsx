@@ -3,6 +3,7 @@ import { DiscountIcon } from './icons/DiscountIcon';
 import { HeartIcon } from './icons/HeartIcon';
 import { MinusIcon } from './icons/MinusIcon';
 import { PlusIcon } from './icons/PlusIcon';
+import { SearchIcon } from './icons/SearchIcon';
 import { ShareIcon } from './icons/ShareIcon';
 import { TicketIcon } from './icons/TicketIcon';
 import { Trashcon } from './icons/Trashcon';
@@ -18,4 +19,5 @@ export const ICON_MAP = {
   plus: PlusIcon,
   minus: MinusIcon,
   ticket: TicketIcon,
+  search: SearchIcon,
 };

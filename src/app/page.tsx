@@ -1,8 +1,26 @@
-import { Brand, Button, DeliveryType, Icon, Text } from '@/components';
+import {
+  Brand,
+  Button,
+  DeliveryType,
+  Icon,
+  Input,
+  Text,
+  Textarea,
+} from '@/components';
 
 export default function Home() {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-background">
+      <div className="space-y-2">
+        <Input />
+        <Input placeholder="busque pela loja ou culinária" icon="search" />
+        <Textarea
+          resizable
+          placeholder={`alguma observação do item? • opcional\nex: tirar algum ingrediente, ponto do prato`}
+        />
+        <Textarea />
+      </div>
+
       <Brand size={32} variant="icon" />
       <Brand size={64} />
       <Brand size={130} variant="wordmark" />

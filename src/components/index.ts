@@ -3,3 +3,5 @@ export * from './Button/Button';
 export * from './DeliveryType/DeliveryType';
 export * from './Icon/Icon';
 export * from './Brand/Brand';
+export * from './Input/Input';
+export * from './Textarea/Textarea';
