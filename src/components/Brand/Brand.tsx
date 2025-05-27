@@ -12,9 +12,6 @@ export function Brand({
     BRAND_VARIANT_MAP[variant];
 
   return (
-    <BrandComponent
-      width={size || defaultSize}
-      fill={theme.colors[color]}
-    ></BrandComponent>
+    <BrandComponent width={size || defaultSize} fill={theme.colors[color]} />
   );
 }

@@ -6,3 +6,4 @@ export * from './Brand/Brand';
 export * from './Input/Input';
 export * from './Textarea/Textarea';
 export * from './Header/Header';
+export * from './Skeleton/Skeleton';
