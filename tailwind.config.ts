@@ -14,6 +14,16 @@ export default {
     fontFamily: {
       nunito: ['var(--font-nunito)'],
     },
+    container: {
+      center: true,
+      screens: {
+        sm: '740px',
+        md: '960px',
+        lg: '960px',
+        xl: '1120px',
+        '2xl': '1120px',
+      },
+    },
     extend: {},
   },
   plugins: [],

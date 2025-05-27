@@ -87,7 +87,7 @@ export function Button({
   size,
   variant,
   disabled = false,
-  color,
+  color = 'text-neutral-500',
   ...props
 }: ButtonProps) {
   const { container, label } = buttonVariants({
@@ -97,11 +97,11 @@ export function Button({
   });
 
   const textVariant = sizeToTextVariant[size!];
-  const textColor = color || label();
+  const textColor = color ?? label();
 
   return (
     <button className={container()} disabled={disabled} {...props}>
-      <Text as="span" variant={textVariant} weight="bold" className={textColor}>
+      <Text as="span" variant={textVariant} weight="bold" color={textColor}>
         {children}
       </Text>
     </button>
