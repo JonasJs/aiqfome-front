@@ -1,6 +1,8 @@
+import { ArrowRightIcon } from './icons/ArrowRightIcon';
 import { ChevronDownIcon } from './icons/ChevronDownIcon';
 import { DiscountIcon } from './icons/DiscountIcon';
 import { HeartIcon } from './icons/HeartIcon';
+import { LocationIcon } from './icons/LocationIcon';
 import { MinusIcon } from './icons/MinusIcon';
 import { PlusIcon } from './icons/PlusIcon';
 import { SearchIcon } from './icons/SearchIcon';
@@ -20,4 +22,6 @@ export const ICON_MAP = {
   minus: MinusIcon,
   ticket: TicketIcon,
   search: SearchIcon,
+  location: LocationIcon,
+  'arrow-right': ArrowRightIcon,
 };

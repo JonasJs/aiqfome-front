@@ -40,14 +40,13 @@ export function Text({
   variant,
   weight,
   color = 'text-neutral-500',
-  className,
 }: TextProps) {
   return (
     <Component
       className={textVariants({
         variant,
         weight,
-        class: `${color} ${className}`,
+        class: `${color}`,
       })}
     >
       {children}

@@ -1,17 +1,7 @@
-import {
-  Brand,
-  Button,
-  DeliveryType,
-  Icon,
-  Input,
-  Text,
-  Textarea,
-} from '@/components';
-
 export default function Home() {
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center bg-background">
-      <div className="space-y-2">
+    <div className="bg-background">
+      {/* <div className="space-y-2">
         <Input />
         <Input placeholder="busque pela loja ou culinária" icon="search" />
         <Textarea
@@ -66,7 +56,7 @@ export default function Home() {
 
       <Text variant="ParagraphLarge" weight="normal" color="text-neutral-700">
         Exemplo 5
-      </Text>
+      </Text> */}
     </div>
   );
 }

@@ -10,4 +10,5 @@ export interface Icon {
 
 export interface IconProps extends Icon {
   name: IconName;
+  'aria-label'?: string;
 }
