@@ -1,0 +1,1779 @@
+{
+  "data": [
+    {
+      "id": 1173,
+      "name": "Taberu Delivery Express",
+      "slug": "taberu-delivery-express",
+      "phones": "(44) 9 9774-0346",
+      "time_to_prepare_order": 20,
+      "time_to_delivery": "20 - 40",
+      "order_minimum_value": "25.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/9311899d-7443-47a8-8e52-0a0613534830/132_restaurante.png",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/9311899d-7443-47a8-8e52-0a0613534830/160_restaurante.png",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/9311899d-7443-47a8-8e52-0a0613534830/300_restaurante.png",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/9311899d-7443-47a8-8e52-0a0613534830/500_restaurante.png",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/9311899d-7443-47a8-8e52-0a0613534830/restaurante.png"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/b4143b40-3f74-49bb-b61b-aec399cbb3a5/300_restaurante_cover.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/b4143b40-3f74-49bb-b61b-aec399cbb3a5/960_restaurante_cover.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/b4143b40-3f74-49bb-b61b-aec399cbb3a5/1500_restaurante_cover.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/b4143b40-3f74-49bb-b61b-aec399cbb3a5/restaurante_cover.jpg"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": true,
+      "address": {
+        "street_name": "Rua Paranaguá",
+        "number": "450",
+        "complement": "sala 07",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.7,
+        "count": 1526
+      },
+      "payment_methods": {
+        "0": {
+          "id": 181,
+          "name": "Dinheiro"
+        },
+        "3": {
+          "id": 163,
+          "name": "Mastercard Crédito"
+        },
+        "4": {
+          "id": 184,
+          "name": "Mastercard Débito"
+        },
+        "5": {
+          "id": 121,
+          "name": "Visa Crédito"
+        },
+        "6": {
+          "id": 186,
+          "name": "Visa Débito"
+        },
+        "7": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "10": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "11": {
+          "id": 349,
+          "name": "Nubank"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/taberu-delivery-express",
+
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": false
+    },
+    {
+      "id": 12005,
+      "name": "Delícias da China Delivery",
+      "slug": "delicias-da-china-delivery",
+      "phones": "(44) 99774-0346",
+      "time_to_prepare_order": 20,
+      "time_to_delivery": "20 - 40",
+      "order_minimum_value": "25.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/e67bdc89-fb1f-4e51-93f8-f426f2ed0e23/132_restaurante_20180420160124.png",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/e67bdc89-fb1f-4e51-93f8-f426f2ed0e23/160_restaurante_20180420160124.png",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/e67bdc89-fb1f-4e51-93f8-f426f2ed0e23/300_restaurante_20180420160124.png",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/e67bdc89-fb1f-4e51-93f8-f426f2ed0e23/500_restaurante_20180420160124.png",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/e67bdc89-fb1f-4e51-93f8-f426f2ed0e23/restaurante_20180420160124.png"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/f1293930-7a66-47b9-ab2b-81e790e2f146/300_restaurante_cover_20180420160132.png",
+        "960": "https://files.aiqfome.com/restaurantes/cover/f1293930-7a66-47b9-ab2b-81e790e2f146/960_restaurante_cover_20180420160132.png",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/f1293930-7a66-47b9-ab2b-81e790e2f146/1500_restaurante_cover_20180420160132.png",
+        "default": "https://files.aiqfome.com/restaurantes/cover/f1293930-7a66-47b9-ab2b-81e790e2f146/restaurante_cover_20180420160132.png"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "Rua Paranaguá",
+        "number": "415",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 217
+      },
+      "payment_methods": {
+        "0": {
+          "id": 181,
+          "name": "Dinheiro"
+        },
+        "2": {
+          "id": 184,
+          "name": "Mastercard Débito"
+        },
+        "3": {
+          "id": 163,
+          "name": "Mastercard Crédito"
+        },
+        "5": {
+          "id": 186,
+          "name": "Visa Débito"
+        },
+        "6": {
+          "id": 121,
+          "name": "Visa Crédito"
+        },
+        "7": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "9": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "10": {
+          "id": 349,
+          "name": "Nubank"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/delicias-da-china-delivery",
+
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 17421,
+      "name": "Otsukare",
+      "slug": "otsukare",
+      "phones": "(44) 9-9894-4150",
+      "time_to_prepare_order": 60,
+      "time_to_delivery": "90 - 120",
+      "order_minimum_value": "45.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/f7c717b6-ae12-4c90-979a-5becb1e184f1/132_restaurante_20190412153452.jpg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/f7c717b6-ae12-4c90-979a-5becb1e184f1/160_restaurante_20190412153452.jpg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/f7c717b6-ae12-4c90-979a-5becb1e184f1/300_restaurante_20190412153452.jpg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/f7c717b6-ae12-4c90-979a-5becb1e184f1/500_restaurante_20190412153452.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/f7c717b6-ae12-4c90-979a-5becb1e184f1/restaurante_20190412153452.jpg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/70c86ae7-f990-46c1-9d3b-ff0cee3fdf1c/300_restaurante_cover_20210404201027.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/70c86ae7-f990-46c1-9d3b-ff0cee3fdf1c/960_restaurante_cover_20210404201027.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/70c86ae7-f990-46c1-9d3b-ff0cee3fdf1c/1500_restaurante_cover_20210404201027.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/70c86ae7-f990-46c1-9d3b-ff0cee3fdf1c/restaurante_cover_20210404201027.jpg"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "Rua Santos Dumont",
+        "number": "2152",
+        "complement": "B",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.9,
+        "count": 1446
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "3": {
+          "id": 349,
+          "name": "Nubank"
+        },
+        "6": {
+          "id": 181,
+          "name": "Dinheiro"
+        },
+        "12": {
+          "id": 163,
+          "name": "Mastercard Crédito"
+        },
+        "13": {
+          "id": 184,
+          "name": "Mastercard Débito"
+        },
+        "15": {
+          "id": 121,
+          "name": "Visa Crédito"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/otsukare",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 20110,
+      "name": "Sukiyaki House",
+      "slug": "sukiyaki-house",
+      "phones": "(44) 9988-16684",
+      "time_to_prepare_order": 30,
+      "time_to_delivery": "40 - 60",
+      "order_minimum_value": "15.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/3640a933-392f-40cc-8418-50a515c2d205/132_restaurante_20220406182652.jpg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/3640a933-392f-40cc-8418-50a515c2d205/160_restaurante_20220406182652.jpg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/3640a933-392f-40cc-8418-50a515c2d205/300_restaurante_20220406182652.jpg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/3640a933-392f-40cc-8418-50a515c2d205/500_restaurante_20220406182652.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/3640a933-392f-40cc-8418-50a515c2d205/restaurante_20220406182652.jpg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/215e08f9-22a1-40b8-b4d6-942eb41672ee/300_restaurante_cover_20190814174002.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/215e08f9-22a1-40b8-b4d6-942eb41672ee/960_restaurante_cover_20190814174002.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/215e08f9-22a1-40b8-b4d6-942eb41672ee/1500_restaurante_cover_20190814174002.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/215e08f9-22a1-40b8-b4d6-942eb41672ee/restaurante_cover_20190814174002.jpg"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "Rua Silva Jardim",
+        "number": "504",
+        "complement": "sala 7",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.8,
+        "count": 535
+      },
+      "payment_methods": {
+        "0": {
+          "id": 349,
+          "name": "Nubank"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "4": {
+          "id": 258,
+          "name": "Pagamento Online"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/sukiyaki-house",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 28894,
+      "name": "Kaizen Delivery",
+      "slug": "kaizen-delivery",
+      "phones": "(44) 3034-2505",
+      "time_to_prepare_order": 20,
+      "time_to_delivery": "40 - 60",
+      "order_minimum_value": "20.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/e28f508f-5e2e-4ab3-abb4-7dd695399bd6/132_restaurante_20220222234533.png",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/e28f508f-5e2e-4ab3-abb4-7dd695399bd6/160_restaurante_20220222234533.png",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/e28f508f-5e2e-4ab3-abb4-7dd695399bd6/300_restaurante_20220222234533.png",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/e28f508f-5e2e-4ab3-abb4-7dd695399bd6/500_restaurante_20220222234533.png",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/e28f508f-5e2e-4ab3-abb4-7dd695399bd6/restaurante_20220222234533.png"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/406fd295-5681-4a78-881b-d53840c0f5df/300_restaurante_cover_20220223102057.png",
+        "960": "https://files.aiqfome.com/restaurantes/cover/406fd295-5681-4a78-881b-d53840c0f5df/960_restaurante_cover_20220223102057.png",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/406fd295-5681-4a78-881b-d53840c0f5df/1500_restaurante_cover_20220223102057.png",
+        "default": "https://files.aiqfome.com/restaurantes/cover/406fd295-5681-4a78-881b-d53840c0f5df/restaurante_cover_20220223102057.png"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "Avenida Pedro Taques",
+        "number": "2517",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.3,
+        "count": 9
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "3": {
+          "id": 349,
+          "name": "Nubank"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/kaizen-delivery",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 29932,
+      "name": "Matsuri Sushi Garden",
+      "slug": "matsuri-sushi-garden",
+      "phones": "(44) 3029-1277",
+      "time_to_prepare_order": 30,
+      "time_to_delivery": "40 - 60",
+      "order_minimum_value": "30.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/85034548-b042-483f-8e5f-2db8f18d6ebd/132_restaurante_20200326091752.png",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/85034548-b042-483f-8e5f-2db8f18d6ebd/160_restaurante_20200326091752.png",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/85034548-b042-483f-8e5f-2db8f18d6ebd/300_restaurante_20200326091752.png",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/85034548-b042-483f-8e5f-2db8f18d6ebd/500_restaurante_20200326091752.png",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/85034548-b042-483f-8e5f-2db8f18d6ebd/restaurante_20200326091752.png"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/bf305683-cd13-4753-9d01-0c0205ea7630/300_restaurante_cover_20200326092053.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/bf305683-cd13-4753-9d01-0c0205ea7630/960_restaurante_cover_20200326092053.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/bf305683-cd13-4753-9d01-0c0205ea7630/1500_restaurante_cover_20200326092053.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/bf305683-cd13-4753-9d01-0c0205ea7630/restaurante_cover_20200326092053.jpg"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "Av. Rio Branco, ",
+        "number": "169",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.8,
+        "count": 760
+      },
+      "payment_methods": {
+        "1": {
+          "id": 181,
+          "name": "Dinheiro"
+        },
+        "2": {
+          "id": 163,
+          "name": "Mastercard Crédito"
+        },
+        "3": {
+          "id": 184,
+          "name": "Mastercard Débito"
+        },
+        "4": {
+          "id": 121,
+          "name": "Visa Crédito"
+        },
+        "5": {
+          "id": 186,
+          "name": "Visa Débito"
+        },
+        "6": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "13": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "14": {
+          "id": 349,
+          "name": "Nubank"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/matsuri-sushi-garden",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 30983,
+      "name": "Haiku Yakiniku",
+      "slug": "haiku-yakiniku",
+      "phones": "(44) 3354-6820",
+      "time_to_prepare_order": 10,
+      "time_to_delivery": "40 - 60",
+      "order_minimum_value": "30.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/fef0d60c-4ae5-417c-a8f8-f66c1c7797d7/132_restaurante_20210811192841.jpeg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/fef0d60c-4ae5-417c-a8f8-f66c1c7797d7/160_restaurante_20210811192841.jpeg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/fef0d60c-4ae5-417c-a8f8-f66c1c7797d7/300_restaurante_20210811192841.jpeg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/fef0d60c-4ae5-417c-a8f8-f66c1c7797d7/500_restaurante_20210811192841.jpeg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/fef0d60c-4ae5-417c-a8f8-f66c1c7797d7/restaurante_20210811192841.jpeg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/bc214f8a-28ba-41ca-ad27-8820ed9666d2/300_restaurante_cover_20200406194511.png",
+        "960": "https://files.aiqfome.com/restaurantes/cover/bc214f8a-28ba-41ca-ad27-8820ed9666d2/960_restaurante_cover_20200406194511.png",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/bc214f8a-28ba-41ca-ad27-8820ed9666d2/1500_restaurante_cover_20200406194511.png",
+        "default": "https://files.aiqfome.com/restaurantes/cover/bc214f8a-28ba-41ca-ad27-8820ed9666d2/restaurante_cover_20200406194511.png"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "Av. Dr. Gastão Vidigal",
+        "number": "257",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 3.9,
+        "count": 5
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "3": {
+          "id": 349,
+          "name": "Nubank"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/haiku-yakiniku",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 60926,
+      "name": "Momiji Restaurante - Av. Center",
+      "slug": "momiji-restaurante-av-center",
+      "phones": "(44) 9-9128-0510",
+      "time_to_prepare_order": 30,
+      "time_to_delivery": "20 - 40",
+      "order_minimum_value": "0.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/57086afc-ea39-48ba-bb7c-b86bdc6f6d9f/132_restaurante_20210318180632.jpeg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/57086afc-ea39-48ba-bb7c-b86bdc6f6d9f/160_restaurante_20210318180632.jpeg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/57086afc-ea39-48ba-bb7c-b86bdc6f6d9f/300_restaurante_20210318180632.jpeg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/57086afc-ea39-48ba-bb7c-b86bdc6f6d9f/500_restaurante_20210318180632.jpeg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/57086afc-ea39-48ba-bb7c-b86bdc6f6d9f/restaurante_20210318180632.jpeg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/f27bd20c-c297-4faf-903c-7fdca47248a2/300_restaurante_cover_20210318175054.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/f27bd20c-c297-4faf-903c-7fdca47248a2/960_restaurante_cover_20210318175054.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/f27bd20c-c297-4faf-903c-7fdca47248a2/1500_restaurante_cover_20210318175054.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/f27bd20c-c297-4faf-903c-7fdca47248a2/restaurante_cover_20210318175054.jpg"
+      },
+      "status": "OPEN",
+      "aiqentrega_active": true,
+      "address": {
+        "street_name": "Av. São Paulo",
+        "number": "743",
+        "complement": "Loja D25 B26",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.6,
+        "count": 2056
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "3": {
+          "id": 349,
+          "name": "Nubank"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/momiji-restaurante-av-center",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 65457,
+      "name": "Ebisu Express",
+      "slug": "ebisu-express",
+      "phones": "(44) 9-9149-2633",
+      "time_to_prepare_order": 40,
+      "time_to_delivery": "20 - 40",
+      "order_minimum_value": "35.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/4381f821-a537-49c5-be43-d3df82e174da/132_restaurante_20210504115436.jpg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/4381f821-a537-49c5-be43-d3df82e174da/160_restaurante_20210504115436.jpg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/4381f821-a537-49c5-be43-d3df82e174da/300_restaurante_20210504115436.jpg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/4381f821-a537-49c5-be43-d3df82e174da/500_restaurante_20210504115436.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/4381f821-a537-49c5-be43-d3df82e174da/restaurante_20210504115436.jpg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/cb2b9781-e1b4-4143-8aeb-00cea2648996/300_restaurante_cover_20210504115305.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/cb2b9781-e1b4-4143-8aeb-00cea2648996/960_restaurante_cover_20210504115305.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/cb2b9781-e1b4-4143-8aeb-00cea2648996/1500_restaurante_cover_20210504115305.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/cb2b9781-e1b4-4143-8aeb-00cea2648996/restaurante_cover_20210504115305.jpg"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "Rua Paranaguá",
+        "number": "249",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.7,
+        "count": 605
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "3": {
+          "id": 349,
+          "name": "Nubank"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/ebisu-express",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 83744,
+      "name": "Gaijin Sushi Veg",
+      "slug": "gaijin-sushi-veg",
+      "phones": "(44) 9-9176-0093",
+      "time_to_prepare_order": 60,
+      "time_to_delivery": "40 - 60",
+      "order_minimum_value": "15.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/b4950c81-ba9f-451f-91db-7aaaf7402204/132_restaurante_20220120151457.jpeg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/b4950c81-ba9f-451f-91db-7aaaf7402204/160_restaurante_20220120151457.jpeg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/b4950c81-ba9f-451f-91db-7aaaf7402204/300_restaurante_20220120151457.jpeg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/b4950c81-ba9f-451f-91db-7aaaf7402204/500_restaurante_20220120151457.jpeg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/b4950c81-ba9f-451f-91db-7aaaf7402204/restaurante_20220120151457.jpeg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/0a4d8528-1b44-4971-ab28-1f69c9cf821f/300_restaurante_cover_20250418094056.png",
+        "960": "https://files.aiqfome.com/restaurantes/cover/0a4d8528-1b44-4971-ab28-1f69c9cf821f/960_restaurante_cover_20250418094056.png",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/0a4d8528-1b44-4971-ab28-1f69c9cf821f/1500_restaurante_cover_20250418094056.png",
+        "default": "https://files.aiqfome.com/restaurantes/cover/0a4d8528-1b44-4971-ab28-1f69c9cf821f/restaurante_cover_20250418094056.png"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": true,
+      "address": {
+        "street_name": "Viela Pioneiro Emilio Oscar Froeming",
+        "number": "51",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 5,
+        "count": 123
+      },
+      "payment_methods": {
+        "0": {
+          "id": 349,
+          "name": "Nubank"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "4": {
+          "id": 258,
+          "name": "Pagamento Online"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/gaijin-sushi-veg",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 103428,
+      "name": "FAST SUSHI",
+      "slug": "fast-sushi",
+      "phones": "(44) 9 9760-4708",
+      "time_to_prepare_order": 20,
+      "time_to_delivery": "20 - 40",
+      "order_minimum_value": "35.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/9655b7c8-9561-4392-a169-9413b1ea2724/132_restaurante_20230417095942.jpg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/9655b7c8-9561-4392-a169-9413b1ea2724/160_restaurante_20230417095942.jpg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/9655b7c8-9561-4392-a169-9413b1ea2724/300_restaurante_20230417095942.jpg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/9655b7c8-9561-4392-a169-9413b1ea2724/500_restaurante_20230417095942.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/9655b7c8-9561-4392-a169-9413b1ea2724/restaurante_20230417095942.jpg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/059cbf43-d008-46bd-8a7e-93d83c3be9f2/300_restaurante_cover_20230422190817.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/059cbf43-d008-46bd-8a7e-93d83c3be9f2/960_restaurante_cover_20230422190817.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/059cbf43-d008-46bd-8a7e-93d83c3be9f2/1500_restaurante_cover_20230422190817.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/059cbf43-d008-46bd-8a7e-93d83c3be9f2/restaurante_cover_20230422190817.jpg"
+      },
+      "status": "OPEN",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "RUA NEO ALVES MARTINS",
+        "number": "2371",
+        "complement": "SALA 06",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.5,
+        "count": 8
+      },
+      "payment_methods": {
+        "0": {
+          "id": 121,
+          "name": "Visa Crédito"
+        },
+        "1": {
+          "id": 186,
+          "name": "Visa Débito"
+        },
+        "2": {
+          "id": 163,
+          "name": "Mastercard Crédito"
+        },
+        "3": {
+          "id": 184,
+          "name": "Mastercard Débito"
+        },
+        "6": {
+          "id": 181,
+          "name": "Dinheiro"
+        },
+        "9": {
+          "id": 349,
+          "name": "Nubank"
+        },
+        "11": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "13": {
+          "id": 258,
+          "name": "Pagamento Online"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/fast-sushi",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 106344,
+      "name": "Hot Sushi Sarandi",
+      "slug": "hot-sushi-sarandi",
+      "phones": "(44) 9 9157-4789",
+      "time_to_prepare_order": 30,
+      "time_to_delivery": "90 - 120",
+      "order_minimum_value": "39.99",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/518a3f38-c102-4540-ae0c-de5e06301734/132_restaurante_20230718092445.jpeg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/518a3f38-c102-4540-ae0c-de5e06301734/160_restaurante_20230718092445.jpeg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/518a3f38-c102-4540-ae0c-de5e06301734/300_restaurante_20230718092445.jpeg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/518a3f38-c102-4540-ae0c-de5e06301734/500_restaurante_20230718092445.jpeg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/518a3f38-c102-4540-ae0c-de5e06301734/restaurante_20230718092445.jpeg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/e5351733-3521-4ff4-bd67-1bbf344baafa/300_restaurante_cover_20230718092636.png",
+        "960": "https://files.aiqfome.com/restaurantes/cover/e5351733-3521-4ff4-bd67-1bbf344baafa/960_restaurante_cover_20230718092636.png",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/e5351733-3521-4ff4-bd67-1bbf344baafa/1500_restaurante_cover_20230718092636.png",
+        "default": "https://files.aiqfome.com/restaurantes/cover/e5351733-3521-4ff4-bd67-1bbf344baafa/restaurante_cover_20230718092636.png"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "Avenida Bruno de Faveri",
+        "number": "1288",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": -1,
+        "count": 0
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "4": {
+          "id": 349,
+          "name": "Nubank"
+        },
+        "7": {
+          "id": 181,
+          "name": "Dinheiro"
+        },
+        "13": {
+          "id": 163,
+          "name": "Mastercard Crédito"
+        },
+        "15": {
+          "id": 121,
+          "name": "Visa Crédito"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/hot-sushi-sarandi",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 109469,
+      "name": "Oita Sushi Bar Maringá",
+      "slug": "oita-sushi-bar-maringa",
+      "phones": "(44) 9 9124-8949",
+      "time_to_prepare_order": 20,
+      "time_to_delivery": "15 - 30",
+      "order_minimum_value": "34.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/091feb87-6247-4a1f-9778-af8772b80c26/132_restaurante_20231031132039.png",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/091feb87-6247-4a1f-9778-af8772b80c26/160_restaurante_20231031132039.png",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/091feb87-6247-4a1f-9778-af8772b80c26/300_restaurante_20231031132039.png",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/091feb87-6247-4a1f-9778-af8772b80c26/500_restaurante_20231031132039.png",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/091feb87-6247-4a1f-9778-af8772b80c26/restaurante_20231031132039.png"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/01eb97b2-9714-46a2-a5a2-7acc70865c48/300_restaurante_cover_20240624195330.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/01eb97b2-9714-46a2-a5a2-7acc70865c48/960_restaurante_cover_20240624195330.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/01eb97b2-9714-46a2-a5a2-7acc70865c48/1500_restaurante_cover_20240624195330.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/01eb97b2-9714-46a2-a5a2-7acc70865c48/restaurante_cover_20240624195330.jpg"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "AVENIDA TIRADENTES",
+        "number": "877",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.6,
+        "count": 35
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "4": {
+          "id": 349,
+          "name": "Nubank"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/oita-sushi-bar-maringa",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 114585,
+      "name": "Ebisu sushi - zona norte",
+      "slug": "ebisu-sushi-zona-norte",
+      "phones": "(44) 9 9135-2067",
+      "time_to_prepare_order": 30,
+      "time_to_delivery": "20 - 40",
+      "order_minimum_value": "35.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/a391ddf8-fbec-4286-83b6-a98c89505812/132_restaurante_20240422115633.jpg",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/a391ddf8-fbec-4286-83b6-a98c89505812/160_restaurante_20240422115633.jpg",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/a391ddf8-fbec-4286-83b6-a98c89505812/300_restaurante_20240422115633.jpg",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/a391ddf8-fbec-4286-83b6-a98c89505812/500_restaurante_20240422115633.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/a391ddf8-fbec-4286-83b6-a98c89505812/restaurante_20240422115633.jpg"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/a95bc1be-ac85-48a8-a1b3-8ac35b9cf0eb/300_restaurante_cover_20240426184856.jpg",
+        "960": "https://files.aiqfome.com/restaurantes/cover/a95bc1be-ac85-48a8-a1b3-8ac35b9cf0eb/960_restaurante_cover_20240426184856.jpg",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/a95bc1be-ac85-48a8-a1b3-8ac35b9cf0eb/1500_restaurante_cover_20240426184856.jpg",
+        "default": "https://files.aiqfome.com/restaurantes/cover/a95bc1be-ac85-48a8-a1b3-8ac35b9cf0eb/restaurante_cover_20240426184856.jpg"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "AVENIDA DAS PALMEIRAS",
+        "number": "706",
+        "complement": "",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.9,
+        "count": 11
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "4": {
+          "id": 349,
+          "name": "Nubank"
+        },
+        "5": {
+          "id": 181,
+          "name": "Dinheiro"
+        },
+        "10": {
+          "id": 163,
+          "name": "Mastercard Crédito"
+        },
+        "11": {
+          "id": 184,
+          "name": "Mastercard Débito"
+        },
+        "12": {
+          "id": 121,
+          "name": "Visa Crédito"
+        },
+        "13": {
+          "id": 186,
+          "name": "Visa Débito"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/ebisu-sushi-zona-norte",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": true
+    },
+    {
+      "id": 121921,
+      "name": "USAGI SUSHI",
+      "slug": "usagi-sushi",
+      "phones": "(44) 9 9841-7549",
+      "time_to_prepare_order": 50,
+      "time_to_delivery": "90 - 120",
+      "order_minimum_value": "0.00",
+      "top": false,
+      "virtual_avatar": {
+        "132": "https://files.aiqfome.com/restaurantes/avatar/a00fbd19-e887-4cbc-a5af-515117158e42/132_restaurante_20250314162200.png",
+        "160": "https://files.aiqfome.com/restaurantes/avatar/a00fbd19-e887-4cbc-a5af-515117158e42/160_restaurante_20250314162200.png",
+        "300": "https://files.aiqfome.com/restaurantes/avatar/a00fbd19-e887-4cbc-a5af-515117158e42/300_restaurante_20250314162200.png",
+        "500": "https://files.aiqfome.com/restaurantes/avatar/a00fbd19-e887-4cbc-a5af-515117158e42/500_restaurante_20250314162200.png",
+        "default": "https://files.aiqfome.com/restaurantes/avatar/a00fbd19-e887-4cbc-a5af-515117158e42/restaurante_20250314162200.png"
+      },
+      "highlight_image": {
+        "300": "https://files.aiqfome.com/restaurantes/cover/72a0e923-4edf-4db0-9aec-b43fa7df9064/300_restaurante_cover_20241009094025.png",
+        "960": "https://files.aiqfome.com/restaurantes/cover/72a0e923-4edf-4db0-9aec-b43fa7df9064/960_restaurante_cover_20241009094025.png",
+        "1500": "https://files.aiqfome.com/restaurantes/cover/72a0e923-4edf-4db0-9aec-b43fa7df9064/1500_restaurante_cover_20241009094025.png",
+        "default": "https://files.aiqfome.com/restaurantes/cover/72a0e923-4edf-4db0-9aec-b43fa7df9064/restaurante_cover_20241009094025.png"
+      },
+      "status": "CLOSED",
+      "aiqentrega_active": false,
+      "address": {
+        "street_name": "PRACA MANOEL RIBAS",
+        "number": "364",
+        "complement": "SALA 02",
+        "city_name": "Maringá",
+        "state_uf": "PR"
+      },
+      "ratings": {
+        "average": 4.9,
+        "count": 106
+      },
+      "payment_methods": {
+        "0": {
+          "id": 258,
+          "name": "Pagamento Online"
+        },
+        "2": {
+          "id": 345,
+          "name": "Pix"
+        },
+        "4": {
+          "id": 349,
+          "name": "Nubank"
+        },
+        "9": {
+          "id": 181,
+          "name": "Dinheiro"
+        },
+        "14": {
+          "id": 163,
+          "name": "Mastercard Crédito"
+        },
+        "15": {
+          "id": 184,
+          "name": "Mastercard Débito"
+        },
+        "22": {
+          "id": 121,
+          "name": "Visa Crédito"
+        },
+        "23": {
+          "id": 186,
+          "name": "Visa Débito"
+        }
+      },
+      "link": "https://www.aiqfome.com/PR/maringa/usagi-sushi",
+      "neighborhood_restaurants": [
+        {
+          "id": 7858232,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 3999,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 3999,
+            "name": "Conjunto Habitacional Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Conj. Habit. Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 7855325,
+          "delivery_fee": 4.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4013,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4013,
+            "name": "Distrito de Iguatemi",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Distrito de Iguatemi"
+          },
+          "virtual_delivery_fee": "R$ 5.00"
+        },
+        {
+          "id": 8248170,
+          "delivery_fee": 6.99,
+          "restaurant_id": 97477,
+          "neighborhood_id": 4038,
+          "delivery_code": null,
+          "neighborhood": {
+            "id": 4038,
+            "name": "Jardim São Domingos",
+            "city_id": 6190,
+            "created": "2022-02-01T09:51:12-0300",
+            "created_by": null,
+            "modified": "2022-02-01T09:51:17-0300",
+            "modified_by": null,
+            "virtual_name": "Jd. São Domingos"
+          },
+          "virtual_delivery_fee": "R$ 7.00"
+        }
+      ],
+      "free_delivery": false
+    }
+  ],
+  "meta": {
+    "currentPage": 1,
+    "hasNextPage": false,
+    "to": 16
+  }
+}

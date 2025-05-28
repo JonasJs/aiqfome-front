@@ -12,10 +12,10 @@ export const headerVariants = tv({
       'md:flex-row md:items-center md:justify-between md:gap-6',
     ],
     navigationGroup: [
-      'flex items-center justify-between',
+      'justify-between flex-align-center',
       'md:flex-none md:justify-start md:gap-6',
     ],
-    brandGroup: ['flex items-center gap-6'],
+    brandGroup: ['gap-6 flex-align-center'],
     searchForm: ['w-full', 'md:max-w-[500px] md:flex-1'],
     userAction: ['flex justify-end', 'md:flex-none'],
   },

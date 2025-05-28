@@ -22,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      {/* TODO: Criar um componente layout que irá receber uma prop se deve ou não mostrar o search */}
       <body className={`${nunito.variable} font-nunito antialiased`}>
         <Header />
         {children}

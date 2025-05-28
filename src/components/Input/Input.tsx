@@ -5,7 +5,7 @@ import { Icon } from '../Icon/Icon';
 export const inputVariants = tv({
   slots: {
     container: [
-      'flex items-center gap-2 rounded-lg border border-neutral-200 bg-background',
+      'gap-2 rounded-lg border border-neutral-200 bg-background flex-align-center',
       'focus-within:ring-1 focus-within:ring-primary',
       'px-2 py-1',
       'min-h-10',
