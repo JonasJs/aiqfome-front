@@ -3,7 +3,6 @@ import { tv } from 'tailwind-variants';
 import { TextProps } from './Text.types';
 
 export const textVariants = tv({
-  base: 'text-lg',
   variants: {
     variant: {
       HeadingLarge: 'text-3xl',
@@ -19,13 +18,19 @@ export const textVariants = tv({
       normal: 'font-normal',
       semibold: 'font-semibold',
       bold: 'font-bold',
+      extrabold: 'font-extrabold',
     },
   },
   compoundVariants: [
     {
       variant: ['HeadingLarge', 'HeadingMedium', 'HeadingSmall'],
-      weight: 'normal',
+      weight: 'bold',
       class: 'font-bold',
+    },
+    {
+      variant: ['HeadingLarge', 'HeadingMedium', 'HeadingSmall'],
+      weight: 'extrabold',
+      class: 'font-extrabold',
     },
   ],
   defaultVariants: {
@@ -40,13 +45,14 @@ export function Text({
   variant,
   weight,
   color = 'text-neutral-500',
+  className,
 }: TextProps) {
   return (
     <Component
       className={textVariants({
         variant,
         weight,
-        class: `${color}`,
+        class: `${color} ${className}`,
       })}
     >
       {children}

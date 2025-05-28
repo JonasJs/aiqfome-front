@@ -1,21 +1,21 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { DeliveryType } from './DeliveryType';
-import { DeliveryTypeEnum } from './DeliveryType.types';
+import { DeliveryIcon } from './DeliveryIcon';
+import { DeliveryIconEnum } from './DeliveryIcon.types';
 import { Text } from '../Text/Text';
 import { colorsKeys } from '@/theme/theme';
 
-const allDeliveryTypes = Object.values(DeliveryTypeEnum);
+const allDeliveryIcons = Object.values(DeliveryIconEnum);
 
-const meta: Meta<typeof DeliveryType> = {
-  component: DeliveryType,
-  title: 'Components/DeliveryType',
+const meta: Meta<typeof DeliveryIcon> = {
+  component: DeliveryIcon,
+  title: 'Components/DeliveryIcon',
   parameters: {
     layout: 'centered',
   },
   argTypes: {
     type: {
       control: 'select',
-      options: allDeliveryTypes,
+      options: allDeliveryIcons,
       description: 'Select a delivery type to display',
     },
     size: {
@@ -34,33 +34,33 @@ const meta: Meta<typeof DeliveryType> = {
 
 export default meta;
 
-export const Default: StoryObj<typeof DeliveryType> = {
+export const Default: StoryObj<typeof DeliveryIcon> = {
   args: {
-    type: DeliveryTypeEnum.AIQ_DELIVERY_PURPLE,
+    type: DeliveryIconEnum.AIQ_DELIVERY_PURPLE,
   },
 };
 
-export const CustomColor: StoryObj<typeof DeliveryType> = {
+export const CustomColor: StoryObj<typeof DeliveryIcon> = {
   args: {
-    type: DeliveryTypeEnum.AIQ_DELIVERY_PURPLE,
+    type: DeliveryIconEnum.AIQ_DELIVERY_PURPLE,
     color: 'green-500',
   },
 };
 
-export const CustomSize: StoryObj<typeof DeliveryType> = {
+export const CustomSize: StoryObj<typeof DeliveryIcon> = {
   args: {
-    type: DeliveryTypeEnum.AIQ_DELIVERY_PURPLE,
+    type: DeliveryIconEnum.AIQ_DELIVERY_PURPLE,
     color: 'green-500',
     size: 40,
   },
 };
 
-export const AllDeliveryTypes: StoryObj<typeof DeliveryType> = {
+export const AllDeliveryIcons: StoryObj<typeof DeliveryIcon> = {
   render: () => (
     <div className="flex flex-wrap gap-4">
-      {allDeliveryTypes.map((type) => (
+      {allDeliveryIcons.map((type) => (
         <div key={type} className="flex flex-col items-center justify-center">
-          <DeliveryType type={type} />
+          <DeliveryIcon type={type} />
           <Text variant="ParagraphSmall" as="span">
             {type}
           </Text>

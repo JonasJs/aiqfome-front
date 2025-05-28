@@ -1,7 +1,8 @@
 import { Suspense } from 'react';
-import { Text } from '@/components';
-import { Banner } from './components/Banner';
-import { BannerSkeleton } from './components/BannerSkeleton';
+
+import { Banner } from './components/Banner/Banner';
+import { BannerSkeleton } from './components/Banner/BannerSkeleton';
+import { OpenStoresList } from './components/OpenStoresList';
 
 export default function HomePage() {
   return (
@@ -13,9 +14,9 @@ export default function HomePage() {
       </div>
 
       <div className="container px-4 py-6">
-        <Text variant="HeadingSmall" color="text-primary">
-          Abertos
-        </Text>
+        <Suspense fallback={<p>Loading...</p>}>
+          <OpenStoresList />
+        </Suspense>
       </div>
     </main>
   );

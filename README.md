@@ -14,10 +14,14 @@
 
 
   OBS: Escolhar tomadas
+  - Crie um adapter para as chamadas da api, mas dependendo da estrutura poderiamos ter um BFF para que o front possa receber apenas o que ele precisa
+  - Montei as request com base no contrato da api que analise olhando a plataforma web
   - Não configurei para deletar as branches depois de serem mergeadas, para que seja possivel olhei minha estrutura.
   - Poderia separar uma branch de develop ou até mesmo fazer branch de release e separar pensando em grupo de tarefas que entregue valor para o lciente, mas pensando em otimizar o tempo do desafio optei por fazer os PR direto na main.
   - Poderia usar o lucide por exmeplo como lib de icons mas preferir fazer do zero para explorar mais do meu conhecimento e possam da uma olhada em como eu organizos pensando em um Design System proprio
-  
+  - Fiz pequenas alterações nos espaçamento para que pudessemos patronizar com base no DS que inicirei criar, estou alinhado com o desenvolvimento de pixel perfect mas optei em fazer essas mudanças para evidencias minhas preocupações com padrões de design e implementações de Design System.
+  - Olhando a aplicação dei uma olhada no contrato da api e fiz algumas mudanças, por exemplo na listagem da home não vem os paramtros necessarios para a montagem de alguns itens da pagina, mas ao acessa uma rota interna do produto exemplo: (https://www.aiqfome.com/PR/maringa/wanda-salgados) é possivel encontrar o contrato dos itens renderizados mas com o padrão em portugues, então adaptei trazendo alguns parametros para listagem principal, isso reforça que caso não seja possivel trazer essas dados o ideal seria o front centralizar essasr regras em um bff
+  - Para contextos menores e componentes usei o taiwind variants para deixar o codigo mais legivel e facil de entender.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

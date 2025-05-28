@@ -5,6 +5,10 @@ export const colorsLight = {
 
   'green-500': '#02A117',
 
+  'teal-50': '#F2FAFA',
+  'teal-400': '#00A296',
+  'teal-600': '#027A7A',
+
   white: '#FFFFFF',
   background: '#FFFFFF',
 
@@ -14,4 +18,7 @@ export const colorsLight = {
   'neutral-300': '#A8ADB7',
   'neutral-500': '#6D6F73',
   'neutral-700': '#393A3C',
+  'neutral-900': '#202326',
+
+  'yellow-500': '#FFB300',
 } as const;

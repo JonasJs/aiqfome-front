@@ -16,7 +16,7 @@ export const buttonVariants = tv({
   slots: {
     container: [
       'rounded-lg transition-colors',
-      'inline-flex items-center justify-center',
+      'justify-center gap-1 flex-align-center',
     ],
     label: 'text-white',
   },
@@ -74,6 +74,13 @@ export const buttonVariants = tv({
         container: 'text-neutral-300 hover:text-neutral-300',
       },
     },
+    {
+      variant: 'text',
+      size: ['xsmall', 'medium', 'large'],
+      class: {
+        container: 'h-6 px-0',
+      },
+    },
   ],
   defaultVariants: {
     size: 'medium',
@@ -88,6 +95,8 @@ export function Button({
   variant,
   disabled = false,
   color = 'text-neutral-500',
+  className,
+  rightComponent: RightComponent,
   ...props
 }: ButtonProps) {
   const { container, label } = buttonVariants({
@@ -100,10 +109,17 @@ export function Button({
   const textColor = color ?? label();
 
   return (
-    <button className={container()} disabled={disabled} {...props}>
+    <button
+      className={container({
+        class: className,
+      })}
+      disabled={disabled}
+      {...props}
+    >
       <Text as="span" variant={textVariant} weight="bold" color={textColor}>
         {children}
       </Text>
+      {RightComponent && RightComponent}
     </button>
   );
 }

@@ -7,13 +7,13 @@ import { memo } from 'react';
 const deliveryVariants = tv({
   slots: {
     wrapper: [
-      'flex items-center gap-2',
+      'gap-2 flex-align-center',
       'cursor-pointer',
       'focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1',
       'transition-colors',
     ],
-    label: 'space-y-0 text-left',
-    location: 'flex items-center gap-1',
+    label: 'text-left',
+    location: 'gap-1 flex-align-center',
   },
 });
 

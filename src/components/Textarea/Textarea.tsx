@@ -4,7 +4,7 @@ import { TextareaProps } from './Textarea.types';
 export const textareaVariants = tv({
   slots: {
     container: [
-      'flex items-center gap-2 rounded-lg border border-neutral-200',
+      'gap-2 rounded-lg border border-neutral-200 flex-align-center',
       'focus-within:ring-1 focus-within:ring-primary',
       'overflow-hidden',
     ],

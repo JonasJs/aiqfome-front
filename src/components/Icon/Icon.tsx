@@ -12,14 +12,16 @@ export function Icon({
   const Icon = ICON_MAP[name];
 
   return (
-    <Icon
-      role={ariaLabel ? 'img' : undefined}
-      fill={theme.colors[color]}
-      width={size}
-      height={size}
-      aria-label={ariaLabel}
-      aria-hidden={ariaLabel ? undefined : true}
-      focusable={false}
-    />
+    <i>
+      <Icon
+        role={ariaLabel ? 'img' : undefined}
+        fill={theme.colors[color]}
+        width={size}
+        height={size}
+        aria-label={ariaLabel}
+        aria-hidden={ariaLabel ? undefined : true}
+        focusable={false}
+      />
+    </i>
   );
 }

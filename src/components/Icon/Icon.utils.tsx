@@ -7,6 +7,7 @@ import { MinusIcon } from './icons/MinusIcon';
 import { PlusIcon } from './icons/PlusIcon';
 import { SearchIcon } from './icons/SearchIcon';
 import { ShareIcon } from './icons/ShareIcon';
+import { StarFullIcon } from './icons/StarFullIcon';
 import { TicketIcon } from './icons/TicketIcon';
 import { Trashcon } from './icons/Trashcon';
 import { UserIcon } from './icons/UserIcon';
@@ -24,4 +25,5 @@ export const ICON_MAP = {
   search: SearchIcon,
   location: LocationIcon,
   'arrow-right': ArrowRightIcon,
+  'star-full': StarFullIcon,
 };
