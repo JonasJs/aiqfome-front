@@ -61,6 +61,7 @@ Clone do aiqfome desenvolvido com foco em boas práticas, performance e acessibi
 
 ## 📝 Observações
 
+- Todas as branchs estão visiveis assim é possivel olharemcomo eu organizo e também é possivel ver todos so PRs Criado
 - Adaptações no contrato da API baseadas na análise da plataforma web
 - Foco em componentização e reusabilidade
 - Design System próprio para maior consistência visual
