@@ -2,7 +2,10 @@
 
 import { StoreDetailAPI, SummaryStoreAPI } from './store.types';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3333';
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  'https://aiqfome-back.onrender.com' ||
+  'http://localhost:3333';
 
 interface GetOpenStoresResponse {
   data: SummaryStoreAPI[];
