@@ -11,3 +11,8 @@ export * from './StoreCard/StoreCard';
 export * from './Rating/Rating';
 export * from './Rating/RatingButton';
 export * from './InfoBadge/InfoBadge';
+export * from './Breadcrumb/Breadcrumb';
+export * from './Counter/Counter';
+export * from './Checkbox/Checkbox';
+export * from './RadioButton/RadioButton';
+export * from './Footer/Footer';

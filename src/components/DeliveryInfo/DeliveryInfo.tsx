@@ -1,4 +1,3 @@
-// DeliveryInfo.tsx
 import { tv } from 'tailwind-variants';
 import { Icon } from '../Icon/Icon';
 import { Text } from '../Text/Text';
@@ -49,6 +48,5 @@ function DeliveryInfoComponent({ address, onClick }: DeliveryInfoProps) {
 }
 
 const DeliveryInfo = memo(DeliveryInfoComponent);
-DeliveryInfo.displayName = 'DeliveryInfo';
 
 export { DeliveryInfo };

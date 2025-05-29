@@ -7,12 +7,15 @@ import {
 import { MenuCategories, StoreDetail } from '@/domain/Store/store.types';
 import { ProductRow } from './ProductRow';
 import { ProductHeader } from './ProductHeader';
+import Link from 'next/link';
+import { slugify } from '@/utils/utils';
 
 interface MenuAccordionProps {
   categories: StoreDetail['menu']['categories'];
+  slug: string;
 }
 
-export function MenuAccordion({ categories }: MenuAccordionProps) {
+export function MenuAccordion({ categories, slug }: MenuAccordionProps) {
   function hasPromotion(category: MenuCategories) {
     return category.items.some((item) => item.hasPromotion);
   }
@@ -32,7 +35,12 @@ export function MenuAccordion({ categories }: MenuAccordionProps) {
             <AccordionContent>
               {category.items.length &&
                 category.items.map((item) => (
-                  <ProductRow {...item} key={item.name} />
+                  <Link
+                    href={`/restaurante/${slug}/${slugify(item.name)}`}
+                    key={item.name}
+                  >
+                    <ProductRow {...item} />
+                  </Link>
                 ))}
             </AccordionContent>
           </AccordionItem>

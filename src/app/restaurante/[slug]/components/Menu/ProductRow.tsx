@@ -23,7 +23,7 @@ const productRow = tv({
   },
 });
 
-function computePriceData(
+export function computePriceData(
   itemSizes: Array<{
     price: number;
     promotionalPrice?: number;
@@ -58,15 +58,17 @@ function computePriceData(
   };
 }
 
-function PriceTag({
+export function PriceTag({
   priceData,
   hasPromotion,
+  className,
 }: {
   priceData: ReturnType<typeof computePriceData>;
   hasPromotion: boolean;
+  className?: string;
 }) {
   return (
-    <div className="text-right">
+    <div className={className}>
       {priceData.type === 'discount' && (
         <Text weight="bold" variant="ParagraphCapiton" className="line-through">
           R$ {priceData.original}
@@ -146,7 +148,11 @@ export function ProductRow({
       </div>
 
       {availableCount > 0 ? (
-        <PriceTag priceData={priceData} hasPromotion={hasPromotion} />
+        <PriceTag
+          priceData={priceData}
+          hasPromotion={hasPromotion}
+          className="text-right"
+        />
       ) : (
         <div className="w-24 text-right">
           <Text

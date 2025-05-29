@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/components';
+import { Footer, Header } from '@/components';
 
 export const nunito = Nunito({
   variable: '--font-nunito',
@@ -23,9 +23,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       {/* TODO: Criar um componente layout que irá receber uma prop se deve ou não mostrar o search */}
-      <body className={`${nunito.variable} font-nunito antialiased`}>
+      <body
+        className={`${nunito.variable} flex min-h-screen flex-col font-nunito antialiased`}
+      >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

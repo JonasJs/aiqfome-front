@@ -94,7 +94,7 @@ export function Button({
   size,
   variant,
   disabled = false,
-  color = 'text-neutral-500',
+  color = 'text-white',
   className,
   rightComponent: RightComponent,
   ...props

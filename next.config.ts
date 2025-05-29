@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       new URL('https://files.aiqfome.com/restaurantes/avatar/**'),
+      new URL('https://files.aiqfome.com/restaurantes/cover/**'),
     ],
   },
   turbopack: {
