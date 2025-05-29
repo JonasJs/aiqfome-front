@@ -47,6 +47,7 @@ function toCategoryItems(itens: MenuCategoriesAPI['itens']) {
   }
 
   return data.map((item) => ({
+    id: item.id,
     name: item.nome,
     description: item.descricao,
     itemSizes: item.itens_tamanhos.map((size) => ({

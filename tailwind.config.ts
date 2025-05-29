@@ -49,6 +49,9 @@ export default {
           display: 'flex',
           'align-items': 'center',
         },
+        '.shadow-cart-store': {
+          boxShadow: '0 -4px 6px -1px rgba(64, 64, 64, 0.1)',
+        },
       });
     }),
   ],

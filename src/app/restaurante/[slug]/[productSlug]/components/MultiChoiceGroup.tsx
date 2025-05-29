@@ -10,10 +10,11 @@ interface Item {
   type?: string;
 }
 
-interface SelectedOptions {
+export interface SelectedOptions {
   price: number;
   id: number;
   type?: string;
+  name: string;
 }
 
 interface MultiChoiceGroupProps {
@@ -32,52 +33,55 @@ export function MultiChoiceGroup({
   onSelectionChange,
 }: MultiChoiceGroupProps) {
   const [selectedOptions, setSelectedOptions] = useState<SelectedOptions[]>([]);
-
   function handleChange(item: Item, checked: boolean) {
+    let newSelection: SelectedOptions[] = [];
+
     if (item?.type === 'single') {
-      setSelectedOptions([
+      newSelection = [
         {
-          price: item?.price || 0,
+          price: item?.price ?? 0,
           id: item.id,
           type: item?.type,
+          name: item.name,
         },
-      ]);
-      return;
-    }
+      ];
+    } else {
+      const isSingleSelected = selectedOptions.some(
+        (opt) => opt?.type === 'single',
+      );
 
-    const isSingleSelected = selectedOptions.some(
-      (opt) => opt?.type === 'single',
-    );
-
-    if (isSingleSelected) {
-      setSelectedOptions([
-        {
-          price: item?.price || 0,
-          id: item.id,
-          type: item?.type,
-        },
-      ]);
-      return;
-    }
-
-    if (checked) {
-      if (selectedOptions.length < maxSelect) {
-        setSelectedOptions((prev) => [
-          ...prev,
+      if (isSingleSelected) {
+        newSelection = [
           {
-            price: item.price || 0,
+            price: item?.price ?? 0,
             id: item.id,
             type: item?.type,
+            name: item.name,
           },
-        ]);
+        ];
+      } else if (checked) {
+        if (selectedOptions.length < maxSelect) {
+          newSelection = [
+            ...selectedOptions,
+            {
+              price: item?.price ?? 0,
+              id: item.id,
+              type: item?.type,
+              name: item.name,
+            },
+          ];
+        } else {
+          newSelection = [...selectedOptions];
+        }
+      } else {
+        newSelection = selectedOptions.filter(
+          (option) => option.id !== item.id,
+        );
       }
-    } else {
-      setSelectedOptions((prev) =>
-        prev.filter((option) => option.id !== item.id),
-      );
     }
 
-    onSelectionChange?.(selectedOptions);
+    setSelectedOptions(newSelection);
+    onSelectionChange?.(newSelection);
   }
 
   return (

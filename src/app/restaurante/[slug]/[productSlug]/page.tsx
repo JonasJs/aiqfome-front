@@ -2,11 +2,10 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import * as productActions from '../actions';
 import { Breadcrumb, Button, InfoBadge, Text, Textarea } from '@/components';
-import { SingleChoiceGroup } from './components/SingleChoiceGroup';
-import { MultiChoiceGroup } from './components/MultiChoiceGroup';
-import { MultiQuantityGroup } from './components/MultiQuantityGroup';
 import { getstoreStatus } from '../components/DeliveryDetails/DeliveryDetails';
 import { tv } from 'tailwind-variants';
+
+import { ProductItems } from './components/ProductItems';
 
 interface ProductPageProps {
   params: Promise<{ slug: string; productSlug: string }>;
@@ -66,57 +65,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const { content } = productPageVariants({
     isProductAvailable,
   });
-
-  const dataSingleChoiceMock = [
-    {
-      id: 1,
-      name: 'Pequeno',
-      hasPromotion: true,
-      price: 19.9,
-      available: true,
-      description: '3 peças',
-    },
-    {
-      id: 2,
-      name: 'Médio',
-      price: 29.9,
-      hasPromotion: false,
-      available: false,
-      description: '5 peças',
-    },
-    {
-      id: 3,
-      hasPromotion: false,
-      name: 'Grande',
-      price: 39.9,
-      available: true,
-      description: '6 peças',
-    },
-  ];
-
-  const dataMultiChoiceMock = [
-    {
-      id: 1,
-      name: 'shoyu',
-      price: 2.9,
-      type: '',
-    },
-    {
-      id: 2,
-      name: 'gengibre',
-      type: '',
-    },
-    {
-      id: 3,
-      name: 'wasabi',
-      type: '',
-    },
-    {
-      id: 4,
-      name: 'sem acompanhamentos',
-      type: 'single',
-    },
-  ];
 
   return (
     <div className="mb-5">
@@ -182,22 +130,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
           <Button size="medium">adicionar</Button>
         </div>
+        <ProductItems
+          name={product.name}
+          storeName={product.store.name}
+          storeImage={product.store.virtualAvatar.default}
+          id={product.id}
+        />
 
-        <div>
-          <SingleChoiceGroup items={dataSingleChoiceMock} />
-          <MultiChoiceGroup
-            title="acompanhamentos"
-            subTitle="escolha de 1 a 2"
-            items={dataMultiChoiceMock}
-          />
-          <MultiQuantityGroup
-            items={[
-              { id: 1, name: 'Pequeno', price: 10.9 },
-              { id: 2, name: 'Médio', price: 15.9 },
-              { id: 3, name: 'Grande', price: 22.9 },
-            ]}
-          />
-        </div>
         <div className="mt-4">
           <Textarea
             rows={3}
