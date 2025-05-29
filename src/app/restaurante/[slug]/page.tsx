@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { HeaderStore } from './components/HeaderStore/HeaderStore';
 import * as storeActions from './actions';
 import { DeliveryDetails } from './components/DeliveryDetails/DeliveryDetails';
-import { Breadcrumb } from '@/components/Breadcrumb/Breadcrumb';
+import { Breadcrumb } from '@/components';
 import { Menu } from './components/Menu/Menu';
 
 interface StorePageProps {
@@ -35,28 +35,23 @@ export default async function StorePage({ params }: StorePageProps) {
   ];
 
   return (
-    <main>
-      <div className="container px-4 pb-10">
-        <Breadcrumb items={breadcrumbItems} className="mt-2" />
-        <div className="space-y-2 py-3">
-          <HeaderStore
-            name={store?.name}
-            image={store?.virtualAvatar?.default}
-          />
-          <DeliveryDetails
-            ratings={store?.ratings}
-            closingTime={store?.closingTime}
-            openingTime={store?.openingTime}
-            orderMinimumValue={store?.orderMinimumValue}
-            timeToDelivery={store?.timeToDelivery}
-            freeDelivery={store?.aiqentregaActive}
-            neighborhoodRestaurants={store?.neighborhoodRestaurants}
-          />
-        </div>
-        <div className="mt-3">
-          <Menu menu={store.menu} />
-        </div>
+    <div className="container px-4 pb-10">
+      <Breadcrumb items={breadcrumbItems} className="mt-2" />
+      <div className="space-y-2 py-3">
+        <HeaderStore name={store?.name} image={store?.virtualAvatar?.default} />
+        <DeliveryDetails
+          ratings={store?.ratings}
+          closingTime={store?.closingTime}
+          openingTime={store?.openingTime}
+          orderMinimumValue={store?.orderMinimumValue}
+          timeToDelivery={store?.timeToDelivery}
+          freeDelivery={store?.aiqentregaActive}
+          neighborhoodRestaurants={store?.neighborhoodRestaurants}
+        />
       </div>
-    </main>
+      <div className="mt-3">
+        <Menu menu={store.menu} slug={slug} />
+      </div>
+    </div>
   );
 }

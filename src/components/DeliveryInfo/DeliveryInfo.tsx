@@ -49,6 +49,5 @@ function DeliveryInfoComponent({ address, onClick }: DeliveryInfoProps) {
 }
 
 const DeliveryInfo = memo(DeliveryInfoComponent);
-DeliveryInfo.displayName = 'DeliveryInfo';
 
 export { DeliveryInfo };

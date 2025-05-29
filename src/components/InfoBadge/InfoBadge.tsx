@@ -28,11 +28,19 @@ export const badgeVariants = tv({
   },
 });
 
-export function InfoBadge({ type = 'default', children }: InfoBadgeProps) {
+export function InfoBadge({
+  type = 'default',
+  children,
+  className,
+}: InfoBadgeProps) {
   const { container, text } = badgeVariants({ type });
 
   return (
-    <div className={container()}>
+    <div
+      className={container({
+        className,
+      })}
+    >
       <Text variant="ParagraphSmall" className={text()}>
         {children}
       </Text>

@@ -21,6 +21,23 @@ interface DeliveryDetailsProps {
   openingTime: string;
   ratings: StoreDetail['ratings'];
 }
+
+export function getstoreStatus(
+  openingTime: string,
+  closingTime: string,
+): string {
+  const now = new Date().toTimeString().slice(0, 5);
+  if (now < openingTime) {
+    return `Abre às ${openingTime}`;
+  }
+
+  if (now < closingTime) {
+    return `Fecha às ${closingTime}`;
+  }
+
+  return 'Fechado';
+}
+
 export async function DeliveryDetails({
   freeDelivery,
   neighborhoodRestaurants,
@@ -33,18 +50,7 @@ export async function DeliveryDetails({
   // TODO format esta renderizando no cliente e o componente DeliveryIcon tbm
   const orderMinimumvalueFormated = await formatMoney(orderMinimumValue);
 
-  const storeStatus = (() => {
-    const now = new Date().toTimeString().slice(0, 5);
-    if (now < openingTime) {
-      return `Abre às ${openingTime}`;
-    }
-
-    if (now < closingTime) {
-      return `Fecha às ${closingTime}`;
-    }
-
-    return 'Fechado';
-  })();
+  const storeStatus = (() => getstoreStatus(openingTime, closingTime))();
 
   return (
     <div className="space-y-1">

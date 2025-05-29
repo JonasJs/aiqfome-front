@@ -61,7 +61,8 @@ function toCategoryItems(itens: MenuCategoriesAPI['itens']) {
 }
 
 function toStoreDetail(storeDetail: StoreDetailAPI): StoreDetail {
-  const [openingTime, closingTime] = storeDetail.horario.split(/\s*-\s*/);
+  const [openingTime = '', closingTime = ''] =
+    storeDetail?.horario?.split(/\s*-\s*/);
 
   const menuCategories = Object.values(
     storeDetail.menu.cardapios_categorias ?? {},
@@ -80,7 +81,7 @@ function toStoreDetail(storeDetail: StoreDetailAPI): StoreDetail {
       count: storeDetail.quantidade_avaliacoes,
     },
     aiqentregaActive: !!storeDetail.aiqentrega_ativo,
-    neighborhoodRestaurants: storeDetail.bairros_restaurantes.map(
+    neighborhoodRestaurants: storeDetail?.bairros_restaurantes?.map(
       (neighborhood) => ({
         id: neighborhood.id,
         virtualName: neighborhood.bairro.virtual_nome,

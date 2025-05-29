@@ -1,5 +1,4 @@
-'use server';
-export async function formatMoney(cents: number) {
+export function formatMoney(cents: number): string {
   if (typeof cents !== 'number') {
     throw new Error('format() only accepts a number as a parameter');
   }
@@ -8,4 +7,15 @@ export async function formatMoney(cents: number) {
     .toFixed(2)
     .replace('.', ',')
     .replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+
+export function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[\p{Emoji_Presentation}\p{Emoji}\uFE0F]/gu, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/--+/g, '-');
 }
