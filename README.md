@@ -59,6 +59,17 @@ Clone do aiqfome desenvolvido com foco em boas práticas, performance e acessibi
 - Branches mantidas após merge para que possam da uma olhada.
 
 
+## 📝 Observações
+
+- Adaptações no contrato da API baseadas na análise da plataforma web
+- Foco em componentização e reusabilidade
+- Design System próprio para maior consistência visual
+- Decisões técnicas priorizando:
+  - Manutenibilidade do código
+  - Performance da aplicação
+  - Experiência do usuário
+- Crie um crawler que busca as informações da url (https://www.aiqfome.com/PR/maringa/) e ao testar depois do envio notei que ela cai em alguns erros de timout, a api que está meio inconsistente, mas acredito que em uma api real com algumas validações extras funcione perfeitamente.
+
 ## 🚀 Como Executar
 
 ```bash
@@ -77,13 +88,3 @@ npm start
 # Executar Storybook
 npm run storybook
 ```
-
-## 📝 Observações
-
-- Adaptações no contrato da API baseadas na análise da plataforma web
-- Foco em componentização e reusabilidade
-- Design System próprio para maior consistência visual
-- Decisões técnicas priorizando:
-  - Manutenibilidade do código
-  - Performance da aplicação
-  - Experiência do usuário
