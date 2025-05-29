@@ -22,4 +22,5 @@ export const colorsLight = {
   'neutral-900': '#202326',
 
   'yellow-500': '#FFB300',
+  'red-500': '#EA2124',
 } as const;

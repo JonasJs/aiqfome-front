@@ -14,6 +14,7 @@ interface SelectedItem {
   id: number;
   quantity: number;
   price: number;
+  name: string;
 }
 
 interface MultiQuantityGroupProps {
@@ -31,7 +32,6 @@ export function MultiQuantityGroup({
 }: MultiQuantityGroupProps) {
   const [quantities, setQuantities] = useState<Record<number, number>>({});
 
-  // Inicializa o estado com todos os itens em quantidade 0
   useEffect(() => {
     const initialQuantities: Record<number, number> = {};
     items.forEach((item) => {
@@ -40,7 +40,6 @@ export function MultiQuantityGroup({
     setQuantities(initialQuantities);
   }, [items]);
 
-  // Notifica o componente pai quando as quantidades mudam
   useEffect(() => {
     if (onSelectionChange) {
       const selectedItems: SelectedItem[] = [];
@@ -54,6 +53,7 @@ export function MultiQuantityGroup({
             selectedItems.push({
               id: numericId,
               quantity,
+              name: item.name,
               price: item.price,
             });
           }

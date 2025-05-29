@@ -2,11 +2,10 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import * as productActions from '../actions';
 import { Breadcrumb, Button, InfoBadge, Text, Textarea } from '@/components';
-import { SingleChoiceGroup } from './components/SingleChoiceGroup';
-import { MultiChoiceGroup } from './components/MultiChoiceGroup';
-import { MultiQuantityGroup } from './components/MultiQuantityGroup';
 import { getstoreStatus } from '../components/DeliveryDetails/DeliveryDetails';
 import { tv } from 'tailwind-variants';
+
+import { ProductItems } from './components/ProductItems';
 
 interface ProductPageProps {
   params: Promise<{ slug: string; productSlug: string }>;
@@ -67,63 +66,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
     isProductAvailable,
   });
 
-  const dataSingleChoiceMock = [
-    {
-      id: 1,
-      name: 'Pequeno',
-      hasPromotion: true,
-      price: 19.9,
-      available: true,
-      description: '3 peças',
-    },
-    {
-      id: 2,
-      name: 'Médio',
-      price: 29.9,
-      hasPromotion: false,
-      available: false,
-      description: '5 peças',
-    },
-    {
-      id: 3,
-      hasPromotion: false,
-      name: 'Grande',
-      price: 39.9,
-      available: true,
-      description: '6 peças',
-    },
-  ];
-
-  const dataMultiChoiceMock = [
-    {
-      id: 1,
-      name: 'shoyu',
-      price: 2.9,
-      type: '',
-    },
-    {
-      id: 2,
-      name: 'gengibre',
-      type: '',
-    },
-    {
-      id: 3,
-      name: 'wasabi',
-      type: '',
-    },
-    {
-      id: 4,
-      name: 'sem acompanhamentos',
-      type: 'single',
-    },
-  ];
-
   return (
     <div className="mb-5">
       <div className="container md:px-4">
         <div className="relative aspect-[390/130] min-h-[195px] w-full overflow-hidden md:mt-2 md:rounded-lg">
           <InfoBadge type="highlight" className="absolute left-4 top-4 z-10">
-            {storeStatus}
+            {storeStatus.value}
           </InfoBadge>
           <Image
             src="https://files.aiqfome.com/restaurantes/cover/cb2b9781-e1b4-4143-8aeb-00cea2648996/restaurante_cover_20210504115305.jpg"
@@ -182,22 +130,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
           <Button size="medium">adicionar</Button>
         </div>
+        <ProductItems
+          name={product.name}
+          storeName={product.store.name}
+          storeImage={product.store.virtualAvatar.default}
+          id={product.id}
+        />
 
-        <div>
-          <SingleChoiceGroup items={dataSingleChoiceMock} />
-          <MultiChoiceGroup
-            title="acompanhamentos"
-            subTitle="escolha de 1 a 2"
-            items={dataMultiChoiceMock}
-          />
-          <MultiQuantityGroup
-            items={[
-              { id: 1, name: 'Pequeno', price: 10.9 },
-              { id: 2, name: 'Médio', price: 15.9 },
-              { id: 3, name: 'Grande', price: 22.9 },
-            ]}
-          />
-        </div>
         <div className="mt-4">
           <Textarea
             rows={3}

@@ -11,9 +11,16 @@ interface Item {
   description: string;
 }
 
+interface SelectedItem {
+  id: string | number;
+  price: number;
+  name: string;
+  quantity?: number;
+}
+
 interface SingleChoiceGroupProps {
   items: Item[];
-  onSelectionChange?: (selectedItemId: string | number) => void;
+  onSelectionChange?: (selected: SelectedItem) => void;
 }
 
 export function SingleChoiceGroup({
@@ -25,7 +32,19 @@ export function SingleChoiceGroup({
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const selectedId = event.target.value;
     setSelectedOption(selectedId);
-    onSelectionChange?.(selectedId);
+
+    const selectedItem = items.find(
+      (item) => item.id.toString() === selectedId,
+    );
+
+    if (selectedItem) {
+      onSelectionChange?.({
+        id: selectedItem.id,
+        price: selectedItem.price,
+        name: selectedItem.name,
+        quantity: 1,
+      });
+    }
   }
 
   return (

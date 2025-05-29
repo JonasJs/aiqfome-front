@@ -4,11 +4,7 @@ import { Text } from '../Text/Text';
 export const footerVariants = tv({
   slots: {
     root: ['bg-neutral-100'],
-    container: [
-      'container flex flex-col justify-center py-6',
-      // 'container flex flex-col items-center justify-center gap-2 p-4',
-      // 'md:flex-row md:justify-between',
-    ],
+    container: ['container flex flex-col justify-center py-6'],
     brandGroup: ['flex flex-col items-center gap-1', 'md:flex-row md:gap-4'],
   },
 });

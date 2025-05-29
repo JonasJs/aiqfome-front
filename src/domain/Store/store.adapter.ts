@@ -18,7 +18,7 @@ function toSummaryStore(summaryStoreAPI: SummaryStoreAPI): SummaryStore {
     aiqentregaActive: summaryStoreAPI.aiqentrega_active,
     timeToDelivery: summaryStoreAPI.time_to_delivery,
     freeDelivery: summaryStoreAPI.free_delivery,
-    neighborhoodRestaurants: summaryStoreAPI.neighborhood_restaurants.map(
+    neighborhoodRestaurants: summaryStoreAPI?.neighborhood_restaurants?.map(
       (neighborhoodRestaurant) => ({
         id: neighborhoodRestaurant.id,
         virtualDeliveryFee: neighborhoodRestaurant.virtual_delivery_fee,
@@ -47,6 +47,7 @@ function toCategoryItems(itens: MenuCategoriesAPI['itens']) {
   }
 
   return data.map((item) => ({
+    id: item.id,
     name: item.nome,
     description: item.descricao,
     itemSizes: item.itens_tamanhos.map((size) => ({
@@ -61,6 +62,7 @@ function toCategoryItems(itens: MenuCategoriesAPI['itens']) {
 }
 
 function toStoreDetail(storeDetail: StoreDetailAPI): StoreDetail {
+  console.log('storeDetail?.horario => ', storeDetail?.horario);
   const [openingTime = '', closingTime = ''] =
     storeDetail?.horario?.split(/\s*-\s*/);
 

@@ -108,6 +108,7 @@ export interface SummaryStore {
 }
 
 export interface MenuCategoriesItemAPI {
+  id: string | number;
   nome: string;
   descricao: string;
   promocao: number;
@@ -158,6 +159,7 @@ export interface MenuCategoriesItemItemSizes {
 }
 
 export interface MenuCategoriesItem {
+  id: string | number;
   name: string;
   description?: string;
   itemSizes: MenuCategoriesItemItemSizes[];

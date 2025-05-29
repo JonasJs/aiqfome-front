@@ -1,7 +1,6 @@
 'use server';
 
 import { StoreDetailAPI, SummaryStoreAPI } from './store.types';
-import StoresMock from './stores.mock.json';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3333';
 
@@ -19,12 +18,30 @@ interface GetStoreBySlugResponse {
 }
 
 export async function getOpenStores(): Promise<GetOpenStoresResponse> {
-  await new Promise((resolve) => setTimeout(resolve, 0));
+  // Busca menos dados
+  // const res = await fetch(
+  //   'https://www.aiqfome.com/api/stores/filter%5Bcity_ids%5D=6190&filter%5Bculinary_id%5D=498',
+  //   {},
+  // );
 
-  return {
-    data: StoresMock.data as SummaryStoreAPI[],
-    meta: StoresMock.meta,
-  };
+  // Busca todos os dados, aqui o idela seria renderizar na home apenas o necessario e paginar
+  const res = await fetch(
+    'https://www.aiqfome.com/api/stores/filter%5Bcity_ids%5D=6190',
+    {
+      next: {
+        revalidate: 360,
+        tags: ['storeList'],
+      },
+    },
+  );
+
+  if (!res.ok) {
+    throw new Error(`Erro ${res.status} ao buscar lojas`);
+  }
+
+  const response = await res.json();
+
+  return response;
 }
 
 export async function getStoreBySlug(
@@ -38,7 +55,7 @@ export async function getStoreBySlug(
   });
 
   if (!res.ok) {
-    throw new Error(`Erro ${res.status} ao buscar store "${slug}"`);
+    throw new Error(`Erro ${res.status} ao buscar loja "${slug}"`);
   }
 
   return res.json();

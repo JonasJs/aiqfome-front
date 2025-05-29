@@ -1,4 +1,3 @@
-// DeliveryInfo.tsx
 import { tv } from 'tailwind-variants';
 import { Icon } from '../Icon/Icon';
 import { Text } from '../Text/Text';

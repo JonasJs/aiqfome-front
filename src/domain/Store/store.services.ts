@@ -3,23 +3,38 @@
 import { slugify } from '@/utils/utils';
 import { storeAdapter } from './store.adapter';
 import * as storeResources from './store.resources';
-import { MenuCategoriesItem, StoreDetail, SummaryStore } from './store.types';
+import {
+  MenuCategoriesItem,
+  StoreDetail,
+  SummaryStore,
+  SummaryStoreStatusEnum,
+} from './store.types';
 
 interface GetProductBySlugResponse extends MenuCategoriesItem {
   store: StoreDetail;
 }
 
-export async function getOpenStores(): Promise<SummaryStore[]> {
+export async function getOpenStores(): Promise<{
+  storesOpended: SummaryStore[];
+  storesClosed: SummaryStore[];
+}> {
   try {
     const { data } = await storeResources.getOpenStores();
 
-    // TODO: Adicionar filtro para lojas abertas
-    const stores = data;
-    // .filter(
-    //   (store) => store.status === StoreStatusEnum.OPEN,
-    // );
+    const stores = data.map((store) => storeAdapter.toSummaryStore(store));
 
-    return stores.map((store) => storeAdapter.toSummaryStore(store));
+    const storesOpended = stores.filter((store) => {
+      return store.status === SummaryStoreStatusEnum.OPEN;
+    });
+
+    const storesClosed = stores.filter((store) => {
+      return store.status !== SummaryStoreStatusEnum.OPEN;
+    });
+
+    return {
+      storesOpended,
+      storesClosed,
+    };
   } catch (error) {
     throw error;
   }

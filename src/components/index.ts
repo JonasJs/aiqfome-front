@@ -16,3 +16,4 @@ export * from './Counter/Counter';
 export * from './Checkbox/Checkbox';
 export * from './RadioButton/RadioButton';
 export * from './Footer/Footer';
+export * from './StoreCard/StoreCardSkeleton';

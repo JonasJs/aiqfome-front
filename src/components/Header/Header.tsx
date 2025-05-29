@@ -3,6 +3,7 @@ import { Brand } from '../Brand/Brand';
 import { DeliveryInfo } from '../DeliveryInfo/DeliveryInfo';
 import { Icon } from '../Icon/Icon';
 import { Input } from '../Input/Input';
+import Link from 'next/link';
 
 export const headerVariants = tv({
   slots: {
@@ -47,11 +48,13 @@ export function Header() {
         <nav className={navigationGroup()} aria-label="Navegação principal">
           <div className={brandGroup()}>
             {/* TODO: No desktop adicionar a logo wordmark */}
-            <Brand
-              variant="icon"
-              color="white"
-              aria-label="AIQ - Página inicial"
-            />
+            <Link href="/">
+              <Brand
+                variant="icon"
+                color="white"
+                aria-label="AIQ - Página inicial"
+              />
+            </Link>
             <DeliveryInfo address="Rua Mandaguari, 198" />
           </div>
           <div className={userAction({ visibility: 'mobile' })}>
