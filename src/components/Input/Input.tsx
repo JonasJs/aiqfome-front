@@ -18,8 +18,9 @@ export const inputVariants = tv({
   variants: {},
 });
 
-export function Input({ icon, className, ...props }: InputProps) {
+export function Input({ icon, className, id, label, ...props }: InputProps) {
   const { container, input } = inputVariants();
+  const inputId = id || `input-${Math.random().toString(36).substr(2, 9)}`;
 
   return (
     <div
@@ -27,8 +28,19 @@ export function Input({ icon, className, ...props }: InputProps) {
         className,
       })}
     >
-      {icon && <Icon name={icon} color="neutral-300" />}
-      <input className={input()} data-slot="input" {...props} />
+      {label && (
+        <label htmlFor={inputId} className="sr-only">
+          {label}
+        </label>
+      )}
+      {icon && <Icon name={icon} color="neutral-300" aria-hidden="true" />}
+      <input
+        id={inputId}
+        className={input()}
+        data-slot="input"
+        aria-label={!label ? props.placeholder : undefined}
+        {...props}
+      />
     </div>
   );
 }

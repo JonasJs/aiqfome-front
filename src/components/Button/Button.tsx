@@ -114,6 +114,8 @@ export function Button({
         class: className,
       })}
       disabled={disabled}
+      role="button"
+      aria-disabled={disabled}
       {...props}
     >
       <Text as="span" variant={textVariant} weight="bold" color={textColor}>

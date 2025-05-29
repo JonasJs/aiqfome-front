@@ -62,7 +62,6 @@ function toCategoryItems(itens: MenuCategoriesAPI['itens']) {
 }
 
 function toStoreDetail(storeDetail: StoreDetailAPI): StoreDetail {
-  console.log('storeDetail?.horario => ', storeDetail?.horario);
   const [openingTime = '', closingTime = ''] =
     storeDetail?.horario?.split(/\s*-\s*/);
 

@@ -57,17 +57,27 @@ interface ProductItemsProps {
 interface SelectedSizeOption {
   id: string | number;
   price: number;
+  name: string;
 }
 
 interface ExtraOption {
   id: string | number;
   price?: number;
+  name: string;
 }
 
 interface QuantityOption {
   id: number;
   price: number;
   quantity: number;
+  name: string;
+}
+
+interface ProductSelection {
+  id: string | number;
+  name: string;
+  price: number;
+  quantity?: number;
 }
 
 export function ProductItems({
@@ -84,12 +94,27 @@ export function ProductItems({
 
   const cartStore = useCartStore();
 
-  function getUnifiedSelections() {
+  function getUnifiedSelections(): ProductSelection[] {
     return [
-      selectedSize,
-      ...selectedExtras,
-      ...selectedItemsWithQuantity,
-    ].filter(Boolean);
+      selectedSize && {
+        id: selectedSize.id,
+        name: selectedSize?.name,
+        price: selectedSize.price,
+        quantity: 1,
+      },
+      ...selectedExtras.map((extra) => ({
+        id: extra.id,
+        name: extra?.name,
+        price: extra.price ?? 0,
+        quantity: 1,
+      })),
+      ...selectedItemsWithQuantity.map((item) => ({
+        id: item.id,
+        name: item?.name,
+        price: item.price,
+        quantity: item.quantity,
+      })),
+    ].filter(Boolean) as ProductSelection[];
   }
 
   function handleAddToCart() {
@@ -109,6 +134,7 @@ export function ProductItems({
     if (selections.length > 0) {
       handleAddToCart();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedSize, selectedExtras, selectedItemsWithQuantity]);
 
   return (

@@ -3,15 +3,14 @@ import Image from 'next/image';
 import * as productActions from '../actions';
 import { Breadcrumb, Button, InfoBadge, Text, Textarea } from '@/components';
 import { getstoreStatus } from '../components/DeliveryDetails/DeliveryDetails';
-import { tv } from 'tailwind-variants';
-
 import { ProductItems } from './components/ProductItems';
+import { tv } from 'tailwind-variants';
 
 interface ProductPageProps {
   params: Promise<{ slug: string; productSlug: string }>;
 }
 
-export const productPageVariants = tv({
+const productPageVariants = tv({
   slots: {
     content: ['container px-4'],
   },

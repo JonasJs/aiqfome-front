@@ -26,6 +26,19 @@ export const Default: Story = {
       },
       status: 'OPEN',
       aiqentregaActive: true,
+      timeToDelivery: '30-45 min',
+      freeDelivery: true,
+      neighborhoodRestaurants: [
+        {
+          virtualDeliveryFee: 'grátis',
+          id: 1,
+          virtualName: 'R$ 5,00',
+        },
+      ],
+      ratings: {
+        average: 4.5,
+        count: 100,
+      },
     },
   },
 };
@@ -43,6 +56,19 @@ export const Closed: Story = {
       },
       status: 'CLOSED',
       aiqentregaActive: true,
+      timeToDelivery: '30-45 min',
+      freeDelivery: false,
+      neighborhoodRestaurants: [
+        {
+          virtualDeliveryFee: 'R$ 5,00',
+          id: 1,
+          virtualName: 'R$ 5,00',
+        },
+      ],
+      ratings: {
+        average: 4.0,
+        count: 50,
+      },
     },
   },
 };

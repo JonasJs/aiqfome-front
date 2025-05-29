@@ -48,17 +48,22 @@ export function SingleChoiceGroup({
   }
 
   return (
-    <div className="border-b-4 border-neutral-100 py-4">
+    <div
+      className="border-b-4 border-neutral-100 py-4"
+      role="group"
+      aria-labelledby="group-title group-subtitle"
+    >
       <div className="justify-between flex-align-center">
         <div>
           <Text
+            id="group-title"
             variant="ParagraphMedium"
             weight="bold"
             color="text-neutral-700"
           >
             acompanhamentos
           </Text>
-          <Text variant="ParagraphSmall" weight="semibold">
+          <Text id="group-subtitle" variant="ParagraphSmall" weight="semibold">
             escolha de 1 a 2
           </Text>
         </div>

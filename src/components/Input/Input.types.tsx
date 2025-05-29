@@ -7,4 +7,5 @@ export type InputVariants = VariantProps<typeof inputVariants>;
 
 export interface InputProps extends InputVariants, ComponentProps<'input'> {
   icon?: IconName;
+  label?: string;
 }

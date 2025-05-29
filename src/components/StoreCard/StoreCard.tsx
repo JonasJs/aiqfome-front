@@ -31,9 +31,18 @@ export async function StoreCard({ store }: StoreCardProps) {
   }
 
   return (
-    <div className={container()}>
+    <div
+      className={container()}
+      role="article"
+      aria-label={`${store.name} - Restaurante`}
+    >
       <div className={imageWrapper()}>
-        <Image src={store.virtualAvatar.default} alt={store.name} fill />
+        <Image
+          src={store.virtualAvatar.default}
+          alt={`Logo do restaurante ${store.name}`}
+          fill
+          aria-hidden="true"
+        />
       </div>
 
       <div className={content()}>

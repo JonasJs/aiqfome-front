@@ -85,10 +85,15 @@ export function MultiChoiceGroup({
   }
 
   return (
-    <div className="border-b-4 border-neutral-100 py-4">
+    <div
+      className="border-b-4 border-neutral-100 py-4"
+      role="group"
+      aria-labelledby="multi-group-title multi-group-subtitle"
+    >
       <div className="justify-between flex-align-center">
         <div>
           <Text
+            id="multi-group-title"
             variant="ParagraphMedium"
             weight="bold"
             color="text-neutral-700"
@@ -96,7 +101,11 @@ export function MultiChoiceGroup({
             {title}
           </Text>
           {subTitle && (
-            <Text variant="ParagraphSmall" weight="semibold">
+            <Text
+              id="multi-group-subtitle"
+              variant="ParagraphSmall"
+              weight="semibold"
+            >
               {subTitle}
             </Text>
           )}

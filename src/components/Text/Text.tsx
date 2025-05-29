@@ -46,9 +46,11 @@ export function Text({
   weight,
   color = 'text-neutral-500',
   className,
+  id = '',
 }: TextProps) {
   return (
     <Component
+      id={id}
       className={textVariants({
         variant,
         weight,
