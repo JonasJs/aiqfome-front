@@ -4,6 +4,7 @@ import * as storeActions from './actions';
 import { DeliveryDetails } from './components/DeliveryDetails/DeliveryDetails';
 import { Breadcrumb } from '@/components';
 import { Menu } from './components/Menu/Menu';
+import { Text } from '@/components';
 
 interface StorePageProps {
   params: Promise<{ slug: string }>;
@@ -50,7 +51,17 @@ export default async function StorePage({ params }: StorePageProps) {
         />
       </div>
       <div className="mt-3">
-        <Menu menu={store.menu} slug={slug} />
+        {store.menu.categories.length > 0 ? (
+          <Menu menu={store.menu} slug={slug} />
+        ) : (
+          <Text
+            weight="semibold"
+            variant="ParagraphMedium"
+            color="text-neutral-700"
+          >
+            Nenhum item encontrado
+          </Text>
+        )}
       </div>
     </div>
   );

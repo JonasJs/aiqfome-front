@@ -13,17 +13,22 @@ export const storeCardVariants = tv({
       'border-1 rounded-lg border-neutral-100',
     ],
     imageWrapper: [
-      'relative h-[72px] w-[72px]',
       'border-r-2 border-neutral-100',
+      'relative aspect-[72/72] h-[72px] w-[72px] overflow-hidden',
     ],
     deliveryInfo: 'gap-1 flex-align-center',
-    content: 'flex-1 space-y-1 p-3',
+    content: 'flex-1 space-y-1 px-3 py-2',
   },
 });
 
 export async function StoreCard({ store }: StoreCardProps) {
   const { container, imageWrapper, content, deliveryInfo } =
     storeCardVariants();
+
+  function truncateText(text: string, maxLength: number) {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + '...';
+  }
 
   return (
     <div className={container()}>
@@ -32,8 +37,13 @@ export async function StoreCard({ store }: StoreCardProps) {
       </div>
 
       <div className={content()}>
-        <Text variant="ParagraphMedium" weight="bold" color="text-neutral-500">
-          {store.name}
+        <Text
+          variant="ParagraphMedium"
+          weight="bold"
+          color="text-neutral-500"
+          className="block max-w-full truncate"
+        >
+          {truncateText(store.name, 30)}
         </Text>
         <div className={deliveryInfo()}>
           <DeliveryIcon
@@ -47,7 +57,7 @@ export async function StoreCard({ store }: StoreCardProps) {
                 weight="bold"
               >
                 {store.freeDelivery
-                  ? store.neighborhoodRestaurants[0].virtual_delivery_fee
+                  ? store.neighborhoodRestaurants[0].virtualDeliveryFee
                   : 'grátis'}
               </Text>
             }

@@ -71,7 +71,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <div className="container md:px-4">
         <div className="relative aspect-[390/130] min-h-[195px] w-full overflow-hidden md:mt-2 md:rounded-lg">
           <InfoBadge type="highlight" className="absolute left-4 top-4 z-10">
-            {storeStatus}
+            {storeStatus.value}
           </InfoBadge>
           <Image
             src="https://files.aiqfome.com/restaurantes/cover/cb2b9781-e1b4-4143-8aeb-00cea2648996/restaurante_cover_20210504115305.jpg"

@@ -22,7 +22,7 @@ export function MenuAccordion({ categories, slug }: MenuAccordionProps) {
 
   return (
     <Accordion type="multiple">
-      {categories.length &&
+      {categories.length > 0 &&
         categories.map((category) => (
           <AccordionItem key={category.id} value={category.name}>
             <AccordionTrigger>

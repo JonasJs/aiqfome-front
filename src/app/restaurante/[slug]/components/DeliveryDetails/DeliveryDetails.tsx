@@ -10,6 +10,7 @@ import {
   NeighborhoodRestaurant,
   StoreDetail,
 } from '@/domain/Store/store.types';
+import { PrefixedColor } from '@/theme/theme.types';
 import { formatMoney } from '@/utils/utils';
 
 interface DeliveryDetailsProps {
@@ -25,17 +26,34 @@ interface DeliveryDetailsProps {
 export function getstoreStatus(
   openingTime: string,
   closingTime: string,
-): string {
+): { value: string; color: PrefixedColor<'text'> } {
   const now = new Date().toTimeString().slice(0, 5);
+
+  if (openingTime === 'Fechado') {
+    return {
+      value: 'Fechado',
+      color: 'text-red-500',
+    };
+  }
+
   if (now < openingTime) {
-    return `Abre às ${openingTime}`;
+    return {
+      value: `Abre às ${openingTime}`,
+      color: 'text-green-500',
+    };
   }
 
   if (now < closingTime) {
-    return `Fecha às ${closingTime}`;
+    return {
+      value: `Fechando às ${closingTime}`,
+      color: 'text-yellow-500',
+    };
   }
 
-  return 'Fechado';
+  return {
+    value: 'Fechado',
+    color: 'text-red-500',
+  };
 }
 
 export async function DeliveryDetails({
@@ -95,8 +113,8 @@ export async function DeliveryDetails({
         <Text variant="ParagraphSmall" color="text-neutral-300" weight="bold">
           •
         </Text>
-        <Text variant="ParagraphSmall" weight="bold" color="text-green-500">
-          {storeStatus}
+        <Text variant="ParagraphSmall" weight="bold" color={storeStatus.color}>
+          {storeStatus.value}
         </Text>
       </div>
 
