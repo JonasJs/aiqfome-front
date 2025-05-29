@@ -10,7 +10,7 @@ export function HeaderStore({ name, image }: HeaderStoreProps) {
   return (
     <div className="flex-wrap gap-3 flex-align-center">
       <div className="sm:wap-1 w-full gap-2 flex-align-center sm:w-auto">
-        <div className="relative h-9 w-9 rounded border border-neutral-100 bg-neutral-50">
+        <div className="relative h-9 w-9 overflow-hidden rounded border border-neutral-100 bg-neutral-50">
           <Image src={image} alt={name} fill priority />
         </div>
         <Text

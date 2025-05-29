@@ -9,7 +9,7 @@ export const textareaVariants = tv({
       'overflow-hidden',
     ],
     textarea: [
-      'bg-transparent placeholder-neutral-400 flex-1 text-neutral-500 outline-none',
+      'bg-transparent flex-1 text-neutral-500 placeholder-neutral-400 outline-none',
       'text-sm font-semibold',
       'px-4 py-2',
     ],

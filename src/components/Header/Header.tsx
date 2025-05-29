@@ -55,7 +55,11 @@ export function Header() {
             <DeliveryInfo address="Rua Mandaguari, 198" />
           </div>
           <div className={userAction({ visibility: 'mobile' })}>
-            <button aria-label="Abrir menu do usuário" type="button">
+            <button
+              aria-label="Abrir menu do usuário"
+              type="button"
+              className="leading-none"
+            >
               <Icon name="user" color="white" aria-hidden="true" />
             </button>
           </div>
@@ -77,7 +81,11 @@ export function Header() {
           />
         </form>
         <div className={userAction({ visibility: 'desktop' })}>
-          <button aria-label="Abrir menu do usuário" type="button">
+          <button
+            aria-label="Abrir menu do usuário"
+            type="button"
+            className="leading-none"
+          >
             <Icon name="user" color="white" aria-hidden="true" />
           </button>
         </div>

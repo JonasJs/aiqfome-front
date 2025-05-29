@@ -16,6 +16,7 @@ export const colorsLight = {
   'neutral-100': '#EEF0F5',
   'neutral-200': '#CDD1D9',
   'neutral-300': '#A8ADB7',
+  'neutral-400': '#75777C',
   'neutral-500': '#6D6F73',
   'neutral-700': '#393A3C',
   'neutral-900': '#202326',

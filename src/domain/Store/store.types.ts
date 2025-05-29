@@ -1,4 +1,6 @@
-export enum StoreStatusEnum {
+import { Observation } from '@/utils/enum';
+
+export enum SummaryStoreStatusEnum {
   CLOSED = 'CLOSED',
   OPEN = 'OPEN',
 }
@@ -22,7 +24,7 @@ export interface AddressAPI {
   state_uf: string;
 }
 
-export interface RatingsAPI {
+export interface Ratings {
   average: number;
   count: number;
 }
@@ -32,7 +34,7 @@ export interface PaymentMethodDetailAPI {
   name: PaymentMethodNameEnum;
 }
 
-export interface ImageCollectionAPI {
+export interface ImageCollection {
   default: string;
   '132'?: string;
   '160'?: string;
@@ -64,7 +66,7 @@ export interface NeighborhoodRestaurantAPI {
   virtual_delivery_fee: string;
 }
 
-export interface StoreAPI {
+export interface SummaryStoreAPI {
   id: number;
   name: string;
   slug: string;
@@ -74,33 +76,117 @@ export interface StoreAPI {
   order_minimum_value: string;
   top: boolean;
   free_delivery: boolean;
-  virtual_avatar: ImageCollectionAPI;
-  highlight_image: ImageCollectionAPI | null;
-  status: StoreStatusEnum;
+  virtual_avatar: ImageCollection;
+  highlight_image: ImageCollection | null;
+  status: SummaryStoreStatusEnum;
   aiqentrega_active: boolean;
   address: AddressAPI;
-  ratings: RatingsAPI;
+  ratings: Ratings;
   payment_methods: Record<string, PaymentMethodDetailAPI | undefined>;
   link: string;
   neighborhood_restaurants: NeighborhoodRestaurantAPI[];
 }
 
-interface neighborhoodRestaurants {
-  id: number;
-  virtual_name: string;
-  virtual_delivery_fee: string;
+export interface NeighborhoodRestaurant {
+  id: number | string;
+  virtualName: string;
+  virtualDeliveryFee: string;
 }
 
-export interface Store {
+export interface SummaryStore {
   id: number;
   name: string;
   slug: string;
   phones: string;
-  virtualAvatar: ImageCollectionAPI;
-  status: keyof typeof StoreStatusEnum;
+  virtualAvatar: ImageCollection;
+  status: keyof typeof SummaryStoreStatusEnum;
   aiqentregaActive: boolean;
   timeToDelivery: string;
   freeDelivery: boolean;
-  neighborhoodRestaurants: neighborhoodRestaurants[];
-  ratings: RatingsAPI;
+  neighborhoodRestaurants: NeighborhoodRestaurant[];
+  ratings: Ratings;
+}
+
+export interface MenuCategoriesItemAPI {
+  nome: string;
+  descricao: string;
+  promocao: number;
+  observacoes: string;
+  itens_tamanhos: Array<{
+    valor: number;
+    valor_promocional?: number;
+    disponivel: boolean;
+  }>;
+  disponivel: boolean;
+}
+
+export interface MenuCategoriesAPI {
+  id: string;
+  nome: string;
+  descricao: string;
+  itens: MenuCategoriesItemAPI[];
+}
+
+export interface StoreDetailAPI {
+  nome: string;
+  virtual_avatar: ImageCollection;
+  free_delivery: boolean;
+  tempo_entrega: string;
+  pedido_minimo: number;
+  horario: string;
+  avaliacao_media: number;
+  quantidade_avaliacoes: number;
+  aiqentrega_ativo: number;
+  bairros_restaurantes: Array<{
+    id: string;
+    virtual_valor_entrega: string;
+    bairro: {
+      id: string;
+      virtual_nome: string;
+      nome: string;
+    };
+  }>;
+  menu: {
+    cardapios_categorias: Record<string, MenuCategoriesAPI>;
+  };
+}
+
+export interface MenuCategoriesItemItemSizes {
+  price: number;
+  promotionalPrice?: number;
+  available: boolean;
+}
+
+export interface MenuCategoriesItem {
+  name: string;
+  description?: string;
+  itemSizes: MenuCategoriesItemItemSizes[];
+  available: boolean;
+  hasPromotion: boolean;
+  observations: Observation[];
+}
+
+export interface MenuCategories {
+  name: string;
+  id: string;
+  description: string;
+  items: MenuCategoriesItem[];
+}
+
+interface Menu {
+  categories: MenuCategories[];
+}
+
+export interface StoreDetail {
+  name: string;
+  freeDelivery: boolean;
+  virtualAvatar: ImageCollection;
+  timeToDelivery: string;
+  orderMinimumValue: number;
+  closingTime: string;
+  openingTime: string;
+  ratings: Ratings;
+  aiqentregaActive: boolean;
+  neighborhoodRestaurants: NeighborhoodRestaurant[];
+  menu: Menu;
 }
