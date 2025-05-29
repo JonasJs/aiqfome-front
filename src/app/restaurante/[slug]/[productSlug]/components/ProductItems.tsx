@@ -6,6 +6,7 @@ import { MultiQuantityGroup } from './MultiQuantityGroup';
 import { SingleChoiceGroup } from './SingleChoiceGroup';
 import { Button } from '@/components';
 import { useCartStore } from '@/store/useCartStore';
+import { useRouter } from 'next/navigation';
 
 const sizeOptionsMock = [
   {
@@ -57,27 +58,17 @@ interface ProductItemsProps {
 interface SelectedSizeOption {
   id: string | number;
   price: number;
-  name: string;
 }
 
 interface ExtraOption {
   id: string | number;
   price?: number;
-  name: string;
 }
 
 interface QuantityOption {
   id: number;
   price: number;
   quantity: number;
-  name: string;
-}
-
-interface ProductSelection {
-  id: string | number;
-  name: string;
-  price: number;
-  quantity?: number;
 }
 
 export function ProductItems({
@@ -86,6 +77,7 @@ export function ProductItems({
   storeName,
   storeImage,
 }: ProductItemsProps) {
+  const router = useRouter();
   const [selectedSize, setSelectedSize] = useState<SelectedSizeOption>();
   const [selectedExtras, setSelectedExtras] = useState<ExtraOption[]>([]);
   const [selectedItemsWithQuantity, setSelectedItemsWithQuantity] = useState<
@@ -94,27 +86,12 @@ export function ProductItems({
 
   const cartStore = useCartStore();
 
-  function getUnifiedSelections(): ProductSelection[] {
+  function getUnifiedSelections() {
     return [
-      selectedSize && {
-        id: selectedSize.id,
-        name: selectedSize?.name,
-        price: selectedSize.price,
-        quantity: 1,
-      },
-      ...selectedExtras.map((extra) => ({
-        id: extra.id,
-        name: extra?.name,
-        price: extra.price ?? 0,
-        quantity: 1,
-      })),
-      ...selectedItemsWithQuantity.map((item) => ({
-        id: item.id,
-        name: item?.name,
-        price: item.price,
-        quantity: item.quantity,
-      })),
-    ].filter(Boolean) as ProductSelection[];
+      selectedSize,
+      ...selectedExtras,
+      ...selectedItemsWithQuantity,
+    ].filter(Boolean);
   }
 
   function handleAddToCart() {
@@ -125,7 +102,13 @@ export function ProductItems({
       storeImage,
       selections: getUnifiedSelections(),
     };
+    // @ts-expect-error Type mismatch between cartItem and expected Product type
     cartStore.addProduct(cartItem);
+  }
+
+  function goToCartPage() {
+    handleAddToCart();
+    router.push('/carrinho');
   }
 
   useEffect(() => {
@@ -157,7 +140,7 @@ export function ProductItems({
       />
       {getUnifiedSelections().length > 0 && (
         <Button
-          onClick={handleAddToCart}
+          onClick={goToCartPage}
           className="fixed bottom-9 left-1/2 z-50 w-[80%] -translate-x-1/2 sm:w-[40%]"
         >
           Ver ticket

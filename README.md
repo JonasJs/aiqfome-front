@@ -34,8 +34,8 @@ Clone do aiqfome desenvolvido com foco em boas práticas, performance e acessibi
 
 ### API e Integração
 - Adapter pattern nas chamadas de API
-  - Facilita mudanças na integração
-  - Permite implementação futura de BFF
+  - Facilita mudanças na integração mantendo sempre o mesmo contrato para o front
+  - Permite implementação futura de um BFF. (Como utilizei a api da plataforma web e desenvolvi com base nela, encontrei diversas inconsistências de padrões, um BFF poderia ajudar a centralizar a transformação de dados e centralizar regras de negócio)
 - BFF (Backend for Frontend) planejado para:
   - Otimizar dados recebidos pelo front
   - Centralizar transformações de dados
@@ -51,15 +51,13 @@ Clone do aiqfome desenvolvido com foco em boas práticas, performance e acessibi
   - Sistema de tokens consistente
 
 ### Controle de Versão
-- PRs direto na main para agilizar o desenvolvimento
+- PRs direto na main para agilizar o desenvolvimento, mas o ideial seria pensar em branchs como develop ou até mesmo trabalhar direto com branchs de release.
 - Template de PR para padronização
   - Descrição estruturada
   - Checklist de qualidade
   - Integração com Jira
-- Branches mantidas após merge para análise
-- Planejamento futuro:
-  - Branch develop para integrações
-  - Branches de release para entregas
+- Branches mantidas após merge para que possam da uma olhada.
+
 
 ## 🚀 Como Executar
 
