@@ -32,7 +32,7 @@ export const Default: Story = {
         {
           virtualDeliveryFee: 'grátis',
           id: 1,
-          virtualName: 'R$ 5,00',
+          virtualName: 'Bairro 1',
         },
       ],
       ratings: {
@@ -61,8 +61,8 @@ export const Closed: Story = {
       neighborhoodRestaurants: [
         {
           virtualDeliveryFee: 'R$ 5,00',
-          id: 1,
-          virtualName: 'R$ 5,00',
+          id: 2,
+          virtualName: 'Bairro 2',
         },
       ],
       ratings: {
