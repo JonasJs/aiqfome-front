@@ -3,6 +3,7 @@ import { HeaderStore } from './components/HeaderStore/HeaderStore';
 import * as storeActions from './actions';
 import { DeliveryDetails } from './components/DeliveryDetails/DeliveryDetails';
 import { Breadcrumb } from '@/components/Breadcrumb/Breadcrumb';
+import { Menu } from './components/Menu/Menu';
 
 interface StorePageProps {
   params: Promise<{ slug: string }>;
@@ -35,14 +36,25 @@ export default async function StorePage({ params }: StorePageProps) {
 
   return (
     <main>
-      <div className="container px-4 py-2">
-        <Breadcrumb items={breadcrumbItems} className="mb-4" />
-        <HeaderStore name={store?.name} image={store?.virtualAvatar.default} />
-        <div className="mt-2">
-          <DeliveryDetails
-            freeDelivery={store?.aiqentregaActive}
-            neighborhoodRestaurants={store.neighborhoodRestaurants}
+      <div className="container px-4 pb-10">
+        <Breadcrumb items={breadcrumbItems} className="mt-2" />
+        <div className="space-y-2 py-3">
+          <HeaderStore
+            name={store?.name}
+            image={store?.virtualAvatar?.default}
           />
+          <DeliveryDetails
+            ratings={store?.ratings}
+            closingTime={store?.closingTime}
+            openingTime={store?.openingTime}
+            orderMinimumValue={store?.orderMinimumValue}
+            timeToDelivery={store?.timeToDelivery}
+            freeDelivery={store?.aiqentregaActive}
+            neighborhoodRestaurants={store?.neighborhoodRestaurants}
+          />
+        </div>
+        <div className="mt-3">
+          <Menu menu={store.menu} />
         </div>
       </div>
     </main>

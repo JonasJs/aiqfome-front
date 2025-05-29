@@ -1,16 +1,18 @@
-'use client';
-
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { tv } from 'tailwind-variants';
+import { Icon } from '../Icon/Icon';
 
 const accordionVariants = tv({
   slots: {
     root: '',
-    item: 'border-container-95 hover:bg-container-95/30 cursor-pointer border-b-4 transition-colors last:border-b-0',
+    item: [
+      'cursor-pointer',
+      'border-container-95 border-b-4 border-neutral-100 last:border-b-0',
+    ],
     trigger: [
-      'flex flex-1 items-start justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all',
-      'focus-visible:ring-ring/50 focus-visible:border-ring outline-none focus-visible:ring-[3px]',
+      'group flex flex-1 items-start justify-between gap-4 rounded-md py-3 text-left text-sm font-medium transition-all',
+      'focus-visible:ring-ring/50 focus-visible:border-ring outline-none focus-visible:ring-[2px]',
       'disabled:pointer-events-none disabled:opacity-50',
       '[&[data-state=open]>svg]:rotate-180',
     ],
@@ -50,7 +52,11 @@ function AccordionTrigger({
     <AccordionPrimitive.Header className={header()}>
       <AccordionPrimitive.Trigger className={trigger({ className })} {...props}>
         {children}
-        <div className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+        <Icon
+          name="chevron-down"
+          size={20}
+          className="transform transition-transform duration-200 group-data-[state=open]:rotate-180"
+        />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );

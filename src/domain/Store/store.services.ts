@@ -1,34 +1,37 @@
+'use server';
+
 import { storeAdapter } from './store.adapter';
 import * as storeResources from './store.resources';
-import { Store } from './store.types';
+import { StoreDetail, SummaryStore } from './store.types';
 
-export async function getOpenStores(): Promise<Store[]> {
+export async function getOpenStores(): Promise<SummaryStore[]> {
   try {
     const { data } = await storeResources.getOpenStores();
 
+    // TODO: Adicionar filtro para lojas abertas
     const stores = data;
     // .filter(
     //   (store) => store.status === StoreStatusEnum.OPEN,
     // );
 
-    return stores.map((store) => storeAdapter.toStore(store));
+    return stores.map((store) => storeAdapter.toSummaryStore(store));
   } catch (error) {
     throw error;
   }
 }
 
-export async function findStoreBySlug(slug: string): Promise<Store | null> {
+export async function findStoreBySlug(
+  slug: string,
+): Promise<StoreDetail | null> {
   try {
-    console.log('slug', slug);
-    const { data } = await storeResources.getOpenStores();
+    const res = await storeResources.getStoreBySlug(slug);
 
-    const store = data.find((store) => store.slug === slug);
+    const data = res?.data ?? res;
 
-    if (!store) {
+    if (!data) {
       return null;
     }
-
-    return storeAdapter?.toStore(store);
+    return storeAdapter.toStoreDetail(data);
   } catch (error) {
     throw error;
   }
