@@ -29,6 +29,7 @@ export function getstoreStatus(
 ): { value: string; color: PrefixedColor<'text'> } {
   const now = new Date().toTimeString().slice(0, 5);
 
+  console.log(openingTime);
   if (openingTime === 'Fechado') {
     return {
       value: 'Fechado',
@@ -76,20 +77,27 @@ export async function DeliveryDetails({
         <DeliveryIcon
           type="store-delivery"
           color="primary"
-          rightComponent={
-            <Button
-              color="text-primary"
-              variant="text"
-              size="medium"
-              rightComponent={
-                <Icon name="arrow-right" color="primary" size={10} />
-              }
-            >
-              {freeDelivery
-                ? neighborhoodRestaurants[0].virtualDeliveryFee
-                : 'grátis'}
-            </Button>
-          }
+          rightComponent={(() => {
+            const hasVirtualDeliveryFee =
+              neighborhoodRestaurants?.[0]?.virtualDeliveryFee;
+
+            if (!freeDelivery && !hasVirtualDeliveryFee) {
+              return null;
+            }
+
+            return (
+              <Button
+                color="text-primary"
+                variant="text"
+                size="medium"
+                rightComponent={
+                  <Icon name="arrow-right" color="primary" size={10} />
+                }
+              >
+                {freeDelivery ? 'grátis' : hasVirtualDeliveryFee}
+              </Button>
+            );
+          })()}
         />
         <div className="gap-1 flex-align-center">
           <Text variant="ParagraphSmall" weight="bold">
