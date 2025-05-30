@@ -2,10 +2,7 @@
 
 import { StoreDetailAPI, SummaryStoreAPI } from './store.types';
 
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  'https://aiqfome-back.onrender.com' ||
-  'http://localhost:3333';
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 interface GetOpenStoresResponse {
   data: SummaryStoreAPI[];
@@ -39,6 +36,7 @@ export async function getOpenStores(): Promise<GetOpenStoresResponse> {
   );
 
   if (!res.ok) {
+    console.log('aquiii');
     throw new Error(`Erro ${res.status} ao buscar lojas`);
   }
 

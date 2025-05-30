@@ -117,6 +117,11 @@ export interface MenuCategoriesItemAPI {
     valor: number;
     valor_promocional?: number;
     disponivel: boolean;
+    id: number;
+    tamanho: {
+      nome: string;
+      id: number;
+    };
   }>;
   disponivel: boolean;
 }
@@ -152,17 +157,23 @@ export interface StoreDetailAPI {
   };
 }
 
-export interface MenuCategoriesItemItemSizes {
+export interface MenuCategoriesItemItemSize {
+  id: number;
   price: number;
   promotionalPrice?: number;
   available: boolean;
+  hasPromotion: boolean;
+  size: {
+    name: string;
+    id: number;
+  };
 }
 
 export interface MenuCategoriesItem {
   id: string | number;
   name: string;
   description?: string;
-  itemSizes: MenuCategoriesItemItemSizes[];
+  itemSizes: MenuCategoriesItemItemSize[];
   available: boolean;
   hasPromotion: boolean;
   observations: Observation[];
