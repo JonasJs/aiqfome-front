@@ -1,79 +1,31 @@
 'use client';
 
-import { InfoBadge, Text, Counter } from '@/components';
-import { useState, useEffect } from 'react';
-
-interface Item {
-  id: number;
-  name: string;
-  price: number;
-  description?: string;
-}
-
-interface SelectedItem {
-  id: number;
-  quantity: number;
-  price: number;
-  name: string;
-}
+import { Counter, InfoBadge, Text } from '@/components';
+import { RequiredItem } from '@/domain/Store/store.types';
+import { formatMoney } from '@/utils/utils';
+// import { useFormContext } from 'react-hook-form';
 
 interface MultiQuantityGroupProps {
-  items: Item[];
+  requiredGroup: RequiredItem[];
   title?: string;
-  subtitle?: string;
-  onSelectionChange?: (selectedItems: SelectedItem[]) => void;
+  errorMessage?: string;
+  limitMinimumRequired: number;
+  limitMaximumRequired: number;
 }
 
 export function MultiQuantityGroup({
-  items = [],
+  requiredGroup = [],
   title = 'acompanhamentos',
-  subtitle = 'escolha de 1 a 2',
-  onSelectionChange,
+  limitMinimumRequired,
+  limitMaximumRequired,
+  errorMessage,
 }: MultiQuantityGroupProps) {
-  const [quantities, setQuantities] = useState<Record<number, number>>({});
-
-  useEffect(() => {
-    const initialQuantities: Record<number, number> = {};
-    items.forEach((item) => {
-      initialQuantities[item.id] = 0;
-    });
-    setQuantities(initialQuantities);
-  }, [items]);
-
-  useEffect(() => {
-    if (onSelectionChange) {
-      const selectedItems: SelectedItem[] = [];
-
-      Object.entries(quantities).forEach(([itemId, quantity]) => {
-        if (quantity > 0) {
-          const numericId = Number(itemId);
-          const item = items.find((i) => i.id === numericId);
-
-          if (item) {
-            selectedItems.push({
-              id: numericId,
-              quantity,
-              name: item.name,
-              price: item.price,
-            });
-          }
-        }
-      });
-
-      onSelectionChange(selectedItems);
-    }
-  }, [quantities, items, onSelectionChange]);
-
-  function handleQuantityChange(itemId: number, value: number) {
-    setQuantities((prev) => ({
-      ...prev,
-      [itemId]: value,
-    }));
-  }
+  // const { register, setValue, watch } = useFormContext();
+  // const selectedItems = watch('selectedRequiredItems') || {};
 
   return (
     <div className="border-b-4 border-neutral-100 py-4">
-      <div className="justify-between flex-align-center">
+      <div className="mb-4 justify-between flex-align-center">
         <div>
           <Text
             variant="ParagraphMedium"
@@ -82,49 +34,57 @@ export function MultiQuantityGroup({
           >
             {title}
           </Text>
-          <Text variant="ParagraphSmall" weight="semibold">
-            {subtitle}
-          </Text>
+          {(limitMaximumRequired || limitMinimumRequired) && (
+            <Text variant="ParagraphSmall" weight="semibold">
+              escolha {limitMinimumRequired} de {limitMaximumRequired}
+            </Text>
+          )}
         </div>
         <InfoBadge>obrigatório</InfoBadge>
       </div>
-      <div className="mt-4 space-y-2">
-        {items.length > 0 &&
-          items.map((item) => (
-            <div
-              key={item.id}
-              className="flex items-start justify-between py-1"
-            >
-              <Counter
-                size="small"
-                value={quantities[item.id] || 0}
-                onChange={(value) => handleQuantityChange(item.id, value)}
-                min={0}
-                max={10}
-                rightComponent={
+      <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 md:grid-cols-3">
+        {requiredGroup.length > 0 &&
+          requiredGroup.map((group) => {
+            return (
+              <div key={group.id} className="justify-between flex-align-center">
+                <Counter
+                  value={0}
+                  size="small"
+                  onChange={() => console.log('')}
+                  disabled={!!group.bloqued}
+                  rightComponent={
+                    <Text
+                      variant="ParagraphSmall"
+                      weight="semibold"
+                      color="text-neutral-700"
+                    >
+                      {group.name}
+                    </Text>
+                  }
+                />
+                {group.price > 0 && (
                   <Text
                     variant="ParagraphSmall"
                     weight="semibold"
-                    color="text-neutral-700"
-                    className="leading-none"
+                    color="text-primary"
                   >
-                    {item.name}
+                    +R$ {formatMoney(group.price)}
                   </Text>
-                }
-              />
-              <div className="gap-1 flex-align-center">
-                <Text
-                  variant="ParagraphSmall"
-                  color="text-primary"
-                  weight="bold"
-                  className="leading-none"
-                >
-                  R$ {item.price.toFixed(2).replace('.', ',')}
-                </Text>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
       </div>
+
+      {errorMessage && (
+        <Text
+          variant="ParagraphSmall"
+          color="text-red-500"
+          className="mt-2 text-center"
+        >
+          {errorMessage}
+        </Text>
+      )}
     </div>
   );
 }

@@ -26,7 +26,7 @@ export async function OpenStoresList() {
           Fechados
         </Text>
         <div className="mt-4 grid grid-cols-1 gap-4 opacity-65 md:grid-cols-2 lg:grid-cols-3">
-          {stores?.storesOpended.map((store) => (
+          {stores?.storesClosed.map((store) => (
             <Link href={`/restaurante/${store.slug}`} key={store.id}>
               <StoreCard store={store} />
             </Link>

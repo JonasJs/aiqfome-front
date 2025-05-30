@@ -5,6 +5,7 @@ import { Breadcrumb, Button, InfoBadge, Text, Textarea } from '@/components';
 import { getstoreStatus } from '../components/DeliveryDetails/DeliveryDetails';
 import { ProductItems } from './components/ProductItems';
 import { tv } from 'tailwind-variants';
+import { computePriceData } from '../components/Menu/ProductRow';
 
 interface ProductPageProps {
   params: Promise<{ slug: string; productSlug: string }>;
@@ -65,6 +66,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
     isProductAvailable,
   });
 
+  console.log(product);
+  const priceData = computePriceData(product.itemSizes, product.hasPromotion);
+
   return (
     <div className="mb-5">
       <div className="container md:px-4">
@@ -87,7 +91,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <Text variant="HeadingSmall" weight="bold" color="text-neutral-700">
             {product.name}
           </Text>
-          <div className="gap-2 flex-align-center">
+          <div className="gap-1 flex-align-center">
             <Text
               variant="ParagraphSmall"
               weight="extrabold"
@@ -100,7 +104,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               weight="extrabold"
               color="text-primary"
             >
-              R$ 19,90
+              R$ {priceData.current}
             </Text>
           </div>
           <Text variant="ParagraphSmall">{product.description}</Text>
@@ -123,17 +127,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 weight="bold"
                 color="text-neutral-700"
               >
-                R$ 19,90
+                R$ ---
               </Text>
             </div>
           </div>
           <Button size="medium">adicionar</Button>
         </div>
         <ProductItems
-          name={product.name}
           storeName={product.store.name}
           storeImage={product.store.virtualAvatar.default}
-          id={product.id}
+          {...product}
         />
 
         <div className="mt-4">

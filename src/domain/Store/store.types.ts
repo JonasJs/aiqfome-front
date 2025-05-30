@@ -107,6 +107,22 @@ export interface SummaryStore {
   ratings: Ratings;
 }
 
+export interface RequiredItemAPI {
+  nome: string;
+  valor: number;
+  bloqueado: boolean;
+  descricao: string;
+  id: number | string;
+}
+
+export interface RequiredGroupAPI {
+  id: number | string;
+  nome: string;
+  obrigatorios: RequiredItemAPI[];
+  limite_obrigatorio: number;
+  limite_minimo_obrigatorio: number;
+}
+
 export interface MenuCategoriesItemAPI {
   id: string | number;
   nome: string;
@@ -117,8 +133,14 @@ export interface MenuCategoriesItemAPI {
     valor: number;
     valor_promocional?: number;
     disponivel: boolean;
+    id: number;
+    tamanho: {
+      nome: string;
+      id: number;
+    };
   }>;
   disponivel: boolean;
+  obrigatorios_grupos?: RequiredGroupAPI[];
 }
 
 export interface MenuCategoriesAPI {
@@ -152,20 +174,43 @@ export interface StoreDetailAPI {
   };
 }
 
-export interface MenuCategoriesItemItemSizes {
+export interface MenuCategoriesItemItemSize {
+  id: number;
   price: number;
   promotionalPrice?: number;
   available: boolean;
+  hasPromotion: boolean;
+  size: {
+    name: string;
+    id: number;
+  };
+}
+
+export interface RequiredItem {
+  name: string;
+  price: number;
+  bloqued: boolean;
+  description: string;
+  id: number | string;
+}
+
+export interface RequiredGroup {
+  id: number | string;
+  name: string;
+  required: RequiredItem[];
+  limitRequired: number;
+  limitMinimumRequired: number;
 }
 
 export interface MenuCategoriesItem {
   id: string | number;
   name: string;
   description?: string;
-  itemSizes: MenuCategoriesItemItemSizes[];
+  itemSizes: MenuCategoriesItemItemSize[];
   available: boolean;
   hasPromotion: boolean;
   observations: Observation[];
+  requiredGroups?: RequiredGroup[];
 }
 
 export interface MenuCategories {

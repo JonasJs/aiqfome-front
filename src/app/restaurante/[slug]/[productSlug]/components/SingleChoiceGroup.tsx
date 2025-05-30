@@ -1,50 +1,25 @@
 'use client';
-import { InfoBadge, Text, RadioButton } from '@/components';
-import { useState } from 'react';
-
-interface Item {
-  id: number | string;
-  name: string;
-  hasPromotion: boolean;
-  price: number;
-  available: boolean;
-  description: string;
-}
-
-interface SelectedItem {
-  id: string | number;
-  price: number;
-  name: string;
-  quantity?: number;
-}
+import { InfoBadge, Text, RadioButton, Icon } from '@/components';
+import { MenuCategoriesItemItemSize } from '@/domain/Store/store.types';
+import { formatMoney } from '@/utils/utils';
+import { useFormContext } from 'react-hook-form';
 
 interface SingleChoiceGroupProps {
-  items: Item[];
-  onSelectionChange?: (selected: SelectedItem) => void;
+  items: MenuCategoriesItemItemSize[];
+  errorMessage?: string;
 }
 
 export function SingleChoiceGroup({
   items,
-  onSelectionChange,
+  errorMessage,
 }: SingleChoiceGroupProps) {
-  const [selectedOption, setSelectedOption] = useState<string>('');
+  const { register, watch, setValue } = useFormContext();
+  const selectedId = watch('selectedSizeId');
 
-  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const selectedId = event.target.value;
-    setSelectedOption(selectedId);
+  const itemsAvailable = items.filter((item) => item.price && item.available);
 
-    const selectedItem = items.find(
-      (item) => item.id.toString() === selectedId,
-    );
-
-    if (selectedItem) {
-      onSelectionChange?.({
-        id: selectedItem.id,
-        price: selectedItem.price,
-        name: selectedItem.name,
-        quantity: 1,
-      });
-    }
+  function handleChange(item: MenuCategoriesItemItemSize) {
+    setValue('selectedSizeItem', item);
   }
 
   return (
@@ -61,42 +36,77 @@ export function SingleChoiceGroup({
             weight="bold"
             color="text-neutral-700"
           >
-            acompanhamentos
+            qual o tamanho?
           </Text>
           <Text id="group-subtitle" variant="ParagraphSmall" weight="semibold">
-            escolha de 1 a 2
+            escolha 1
           </Text>
         </div>
         <InfoBadge>obrigatório</InfoBadge>
       </div>
 
       <div className="mt-4 space-y-2">
-        {items.map((item) => (
-          <RadioButton
-            key={item.id}
-            size="small"
-            name="acompanhamento"
-            value={item.id.toString()}
-            checked={selectedOption === item.id.toString()}
-            onChange={handleChange}
-            rightComponent={
-              <div>
+        {itemsAvailable.map((item) => (
+          <div key={item.size.id} className="justify-between flex-align-center">
+            <RadioButton
+              size="small"
+              {...register('selectedSizeId', {
+                onChange: () => handleChange(item),
+              })}
+              value={item.size.id.toString()}
+              checked={selectedId === item.size.id.toString()}
+              rightComponent={
+                <div className="flex-align-center">
+                  {item.hasPromotion && (
+                    <Icon name="discount" color="green-500" />
+                  )}
+                  <Text
+                    variant="ParagraphSmall"
+                    weight="semibold"
+                    className="leading-none"
+                  >
+                    {item.size.name}
+                  </Text>
+                </div>
+              }
+            />
+            <div className="gap-1 text-right flex-align-center">
+              {item?.promotionalPrice && item.hasPromotion ? (
+                <>
+                  <Text variant="ParagraphCapiton" weight="bold">
+                    de {formatMoney(item.price)} por
+                  </Text>
+                  <Text
+                    variant="ParagraphSmall"
+                    color="text-green-500"
+                    weight="extrabold"
+                  >
+                    R$ {formatMoney(Number(item?.promotionalPrice))}
+                  </Text>
+                </>
+              ) : (
                 <Text
                   variant="ParagraphSmall"
-                  weight="semibold"
-                  color="text-neutral-700"
-                  className="leading-none"
+                  color="text-green-500"
+                  weight="extrabold"
                 >
-                  {item.name}
+                  R$ {formatMoney(Number(item.price))}
                 </Text>
-                <Text variant="ParagraphSmall" color="text-neutral-500">
-                  {item.description}
-                </Text>
-              </div>
-            }
-          />
+              )}
+            </div>
+          </div>
         ))}
       </div>
+
+      {errorMessage && (
+        <Text
+          variant="ParagraphSmall"
+          color="text-red-500"
+          className="mt-2 text-center"
+        >
+          {errorMessage}
+        </Text>
+      )}
     </div>
   );
 }

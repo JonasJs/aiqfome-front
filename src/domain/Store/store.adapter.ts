@@ -46,19 +46,40 @@ function toCategoryItems(itens: MenuCategoriesAPI['itens']) {
     data = Object.values(itens || {});
   }
 
-  return data.map((item) => ({
-    id: item.id,
-    name: item.nome,
-    description: item.descricao,
-    itemSizes: item.itens_tamanhos.map((size) => ({
-      price: size.valor,
-      promotionalPrice: size.valor_promocional,
-      available: size.disponivel,
-    })),
-    observations: toObservationsMap(item.observacoes),
-    hasPromotion: !!item.promocao,
-    available: item.disponivel,
-  }));
+  return data.map((item) => {
+    return {
+      id: item.id,
+      name: item.nome,
+      description: item.descricao,
+      itemSizes: item.itens_tamanhos.map((size) => ({
+        id: size.id,
+        price: size.valor,
+        promotionalPrice: size.valor_promocional,
+        available: size.disponivel,
+        hasPromotion: !!item.promocao,
+        size: {
+          name: size?.tamanho?.nome,
+          id: size?.tamanho?.id,
+        },
+      })),
+      requiredGroups: item?.obrigatorios_grupos?.map((requiredGroup) => ({
+        id: requiredGroup?.id,
+        name: requiredGroup?.nome,
+        limitRequired: requiredGroup?.limite_obrigatorio,
+        limitMinimumRequired: requiredGroup?.limite_minimo_obrigatorio,
+        required: requiredGroup.obrigatorios.map((requiredItem) => ({
+          name: requiredItem?.nome,
+          price: requiredItem?.valor,
+          bloqued: !!requiredItem?.bloqueado,
+          description: requiredItem?.descricao,
+          id: requiredItem?.id,
+        })),
+      })),
+      observations: toObservationsMap(item.observacoes),
+      hasPromotion: !!item.promocao,
+      available: item.disponivel,
+    };
+  });
 }
 
 function toStoreDetail(storeDetail: StoreDetailAPI): StoreDetail {
