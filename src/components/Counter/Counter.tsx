@@ -35,6 +35,9 @@ const counterVariants = tv({
     hasRightComponent: {
       true: 'gap-2',
     },
+    disabled: {
+      true: 'opacity-50',
+    },
   },
   defaultVariants: {
     size: 'medium',
@@ -49,6 +52,7 @@ export function Counter({
   size = 'medium',
   rightComponent: RightComponent,
   className,
+  disabled = false,
 }: CounterProps) {
   const {
     container,
@@ -58,6 +62,7 @@ export function Counter({
   } = counterVariants({
     size,
     hasRightComponent: !!RightComponent,
+    disabled,
   });
 
   const isDecrementDisabled = value <= min;

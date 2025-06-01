@@ -4,6 +4,7 @@ import { Text } from '../Text/Text';
 import { type StoreCardProps } from './StoreCard.types';
 import { DeliveryIcon } from '../DeliveryIcon/DeliveryIcon';
 import { Rating } from '../Rating/Rating';
+import { truncateText } from '@/utils/utils';
 
 export const storeCardVariants = tv({
   slots: {
@@ -14,7 +15,7 @@ export const storeCardVariants = tv({
     ],
     imageWrapper: [
       'border-r-2 border-neutral-100',
-      'relative aspect-[72/72] h-[72px] w-[72px] overflow-hidden',
+      'relative aspect-[1/1] h-[72px] w-[72px] overflow-hidden',
     ],
     deliveryInfo: 'gap-1 flex-align-center',
     content: 'flex-1 space-y-1 px-3 py-2',
@@ -24,11 +25,6 @@ export const storeCardVariants = tv({
 export async function StoreCard({ store }: StoreCardProps) {
   const { container, imageWrapper, content, deliveryInfo } =
     storeCardVariants();
-
-  function truncateText(text: string, maxLength: number) {
-    if (text.length <= maxLength) return text;
-    return text.slice(0, maxLength) + '...';
-  }
 
   return (
     <div
@@ -41,6 +37,7 @@ export async function StoreCard({ store }: StoreCardProps) {
           src={store.virtualAvatar.default}
           alt={`Logo do restaurante ${store.name}`}
           fill
+          sizes="(max-width: 768px) 72px, 72px"
           aria-hidden="true"
         />
       </div>

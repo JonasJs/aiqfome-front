@@ -1,151 +1,95 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { MultiChoiceGroup } from './MultiChoiceGroup';
-import { MultiQuantityGroup } from './MultiQuantityGroup';
-import { SingleChoiceGroup } from './SingleChoiceGroup';
 import { Button } from '@/components';
-import { useCartStore } from '@/store/useCartStore';
-import { useRouter } from 'next/navigation';
+import { SingleChoiceGroup } from './SingleChoiceGroup';
+import { MenuCategoriesItem } from '@/domain/Store/store.types';
+import { useForm, FormProvider } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { MultiQuantityGroup } from './MultiQuantityGroup';
 
-const sizeOptionsMock = [
-  {
-    id: 1,
-    name: 'Pequeno',
-    hasPromotion: true,
-    price: 19.9,
-    available: true,
-    description: '3 peças',
-  },
-  {
-    id: 2,
-    name: 'Médio',
-    price: 29.9,
-    hasPromotion: false,
-    available: false,
-    description: '5 peças',
-  },
-  {
-    id: 3,
-    name: 'Grande',
-    price: 39.9,
-    hasPromotion: false,
-    available: true,
-    description: '6 peças',
-  },
-];
-
-const extrasOptionsMock = [
-  { id: 1, name: 'Shoyu', price: 2.9 },
-  { id: 2, name: 'Gengibre' },
-  { id: 3, name: 'Wasabi' },
-  { id: 4, name: 'Sem acompanhamentos', type: 'single' },
-];
-
-const quantityItemsMock = [
-  { id: 1, name: 'Hot roll', price: 10.9 },
-  { id: 2, name: 'Temaki', price: 15.9 },
-  { id: 3, name: 'Sashimi', price: 22.9 },
-];
-
-interface ProductItemsProps {
-  id: number | string;
-  name: string;
+interface ProductItemsProps extends MenuCategoriesItem {
   storeName: string;
   storeImage: string;
 }
 
-interface SelectedSizeOption {
-  id: string | number;
-  price: number;
-}
+const formSchema = z.object({
+  selectedSizeId: z.string({
+    required_error: 'Por favor, selecione um tamanho',
+  }),
+  selectedSizeItem: z.any().optional(),
+  selectedRequiredItems: z
+    .record(
+      z.string(),
+      z.record(
+        z.string(),
+        z.object({
+          id: z.union([z.string(), z.number()]),
+          quantity: z.number(),
+          name: z.string(),
+          price: z.number(),
+        }),
+      ),
+    )
+    .optional(),
+});
 
-interface ExtraOption {
-  id: string | number;
-  price?: number;
-}
+type FormValues = z.infer<typeof formSchema>;
 
-interface QuantityOption {
-  id: number;
-  price: number;
-  quantity: number;
-}
+export function ProductItems(props: ProductItemsProps) {
+  const methods = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      selectedSizeId: '',
+      selectedSizeItem: undefined,
+      selectedRequiredItems: {},
+    },
+  });
 
-export function ProductItems({
-  id: productId,
-  name: productName,
-  storeName,
-  storeImage,
-}: ProductItemsProps) {
-  const router = useRouter();
-  const [selectedSize, setSelectedSize] = useState<SelectedSizeOption>();
-  const [selectedExtras, setSelectedExtras] = useState<ExtraOption[]>([]);
-  const [selectedItemsWithQuantity, setSelectedItemsWithQuantity] = useState<
-    QuantityOption[]
-  >([]);
+  const {
+    formState: { errors },
+    handleSubmit,
+  } = methods;
 
-  const cartStore = useCartStore();
+  function onSubmit(data: FormValues) {
+    console.log('ID selecionado:', data.selectedSizeId);
+    console.log('Item completo:', data.selectedSizeItem);
+    console.log('Itens obrigatórios:', data.selectedRequiredItems);
 
-  function getUnifiedSelections() {
-    return [
-      selectedSize,
-      ...selectedExtras,
-      ...selectedItemsWithQuantity,
-    ].filter(Boolean);
+    // console.log('Itens obrigatórios (array):', requiredItemsArray);
   }
-
-  function handleAddToCart() {
-    const cartItem = {
-      id: productId,
-      name: productName,
-      storeName,
-      storeImage,
-      selections: getUnifiedSelections(),
-    };
-    // @ts-expect-error Type mismatch between cartItem and expected Product type
-    cartStore.addProduct(cartItem);
-  }
-
-  function goToCartPage() {
-    handleAddToCart();
-    router.push('/carrinho');
-  }
-
-  useEffect(() => {
-    const selections = getUnifiedSelections();
-
-    if (selections.length > 0) {
-      handleAddToCart();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedSize, selectedExtras, selectedItemsWithQuantity]);
 
   return (
-    <div className="space-y-6">
-      <SingleChoiceGroup
-        items={sizeOptionsMock}
-        onSelectionChange={setSelectedSize}
-      />
+    <FormProvider {...methods}>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        {props.itemSizes.length > 0 && (
+          <SingleChoiceGroup
+            items={props.itemSizes}
+            errorMessage={errors.selectedSizeId?.message}
+          />
+        )}
 
-      <MultiChoiceGroup
-        title="Acompanhamentos"
-        subTitle="Escolha de 1 a 2"
-        items={extrasOptionsMock}
-        onSelectionChange={setSelectedExtras}
-      />
+        {props.requiredGroups &&
+          props?.requiredGroups?.length > 0 &&
+          props.requiredGroups.map((requiredGroup) => {
+            return (
+              <MultiQuantityGroup
+                key={requiredGroup.id}
+                requiredGroup={requiredGroup.required}
+                limitMinimumRequired={requiredGroup.limitMinimumRequired}
+                limitMaximumRequired={requiredGroup.limitRequired}
+                title={requiredGroup.name}
+              />
+            );
+          })}
 
-      <MultiQuantityGroup
-        items={quantityItemsMock}
-        onSelectionChange={setSelectedItemsWithQuantity}
-      />
-      {getUnifiedSelections().length > 0 && (
         <Button
-          onClick={goToCartPage}
+          type="submit"
           className="fixed bottom-9 left-1/2 z-50 w-[80%] -translate-x-1/2 sm:w-[40%]"
         >
           Ver ticket
         </Button>
-      )}
-    </div>
+      </form>
+    </FormProvider>
   );
 }

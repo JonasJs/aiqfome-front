@@ -1,8 +1,11 @@
 import { Icon, Text } from '@/components';
-import { MenuCategoriesItem } from '@/domain/Store/store.types';
-import { formatMoney } from '@/utils/utils';
+import {
+  MenuCategoriesItem,
+  MenuCategoriesItemItemSize,
+} from '@/domain/Store/store.types';
 import { tv } from 'tailwind-variants';
 import { useMemo } from 'react';
+import { formatMoney } from '@/utils/utils';
 
 // TODO: Quebrar em componentes menores
 type ProductRowProps = MenuCategoriesItem;
@@ -23,14 +26,16 @@ const productRow = tv({
   },
 });
 
+export type PriceData = {
+  type: 'normal' | 'starting-at' | 'discount';
+  original?: string;
+  current: string;
+};
+
 export function computePriceData(
-  itemSizes: Array<{
-    price: number;
-    promotionalPrice?: number;
-    available: boolean;
-  }>,
+  itemSizes: MenuCategoriesItemItemSize[],
   hasPromotion: boolean,
-) {
+): PriceData {
   const availableSizes = itemSizes.filter(
     (size) => size.available && size.price != null,
   );
@@ -63,7 +68,7 @@ export function PriceTag({
   hasPromotion,
   className,
 }: {
-  priceData: ReturnType<typeof computePriceData>;
+  priceData: PriceData;
   hasPromotion: boolean;
   className?: string;
 }) {

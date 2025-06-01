@@ -34,10 +34,10 @@ export function MenuAccordion({ categories, slug }: MenuAccordionProps) {
             </AccordionTrigger>
             <AccordionContent>
               {category.items.length &&
-                category.items.map((item) => (
+                category.items.map((item, index) => (
                   <Link
                     href={`/restaurante/${slug}/${slugify(item.name)}`}
-                    key={item.name}
+                    key={`${category.id}-${item.name}-${index}`}
                   >
                     <ProductRow {...item} />
                   </Link>

@@ -8,4 +8,5 @@ export interface CounterProps {
   size?: 'small' | 'medium';
   rightComponent?: ReactNode;
   className?: string;
+  disabled?: boolean;
 }

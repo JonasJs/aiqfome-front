@@ -5,7 +5,7 @@ import { RadioButtonProps } from './RadioButton.types';
 
 export const radioButtonVariants = tv({
   slots: {
-    container: ['flex items-start gap-2'],
+    container: ['gap-1 flex-align-center'],
     radio: [
       'appearance-none',
       'rounded-full border-2 border-neutral-300',

@@ -64,45 +64,74 @@ export async function generateMetadata({
 
 export default async function StorePage({ params }: StorePageProps) {
   const { slug } = await params;
-  const store = await storeActions.findStoreBySlug(slug);
 
-  if (!store) {
-    return <p>Nenhuma loja encontrada</p>;
-  }
+  try {
+    const store = await storeActions.findStoreBySlug(slug);
 
-  const breadcrumbItems = [
-    { label: 'Início', href: '/' },
-    { label: store.name, href: `/restaurante/${slug}` },
-  ];
-
-  return (
-    <div className="container px-4 pb-10">
-      <Breadcrumb items={breadcrumbItems} className="mt-2" />
-      <div className="space-y-2 py-3">
-        <HeaderStore name={store?.name} image={store?.virtualAvatar?.default} />
-        <DeliveryDetails
-          ratings={store?.ratings}
-          closingTime={store?.closingTime}
-          openingTime={store?.openingTime}
-          orderMinimumValue={store?.orderMinimumValue}
-          timeToDelivery={store?.timeToDelivery}
-          freeDelivery={store?.aiqentregaActive}
-          neighborhoodRestaurants={store?.neighborhoodRestaurants}
-        />
-      </div>
-      <div className="mt-3">
-        {store.menu.categories.length > 0 ? (
-          <Menu menu={store.menu} slug={slug} />
-        ) : (
+    if (!store) {
+      return (
+        <div className="container px-4 py-10">
           <Text
             weight="semibold"
-            variant="ParagraphMedium"
+            variant="ParagraphLarge"
             color="text-neutral-700"
           >
-            Nenhum item encontrado
+            Restaurante não encontrado
           </Text>
-        )}
+        </div>
+      );
+    }
+
+    const breadcrumbItems = [
+      { label: 'Início', href: '/' },
+      { label: store.name, href: `/restaurante/${slug}` },
+    ];
+
+    return (
+      <div className="container flex-1 px-4 pb-10">
+        <Breadcrumb items={breadcrumbItems} className="mt-2" />
+        <div className="space-y-2 py-3">
+          <HeaderStore
+            name={store?.name}
+            image={store?.virtualAvatar?.default}
+          />
+          <DeliveryDetails
+            ratings={store?.ratings}
+            closingTime={store?.closingTime}
+            openingTime={store?.openingTime}
+            orderMinimumValue={store?.orderMinimumValue}
+            timeToDelivery={store?.timeToDelivery}
+            freeDelivery={store?.aiqentregaActive}
+            neighborhoodRestaurants={store?.neighborhoodRestaurants}
+          />
+        </div>
+        <div className="mt-3">
+          {store.menu.categories.length > 0 ? (
+            <Menu menu={store.menu} slug={slug} />
+          ) : (
+            <Text
+              weight="semibold"
+              variant="ParagraphMedium"
+              color="text-neutral-700"
+            >
+              Nenhum item encontrado
+            </Text>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } catch {
+    return (
+      <div className="container px-4 py-10">
+        <Text
+          weight="semibold"
+          variant="ParagraphLarge"
+          color="text-neutral-700"
+        >
+          Não foi possível carregar as informações do restaurante. Por favor,
+          tente novamente em alguns instantes.
+        </Text>
+      </div>
+    );
+  }
 }

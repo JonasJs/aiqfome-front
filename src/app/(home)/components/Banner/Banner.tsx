@@ -20,7 +20,13 @@ export async function Banner() {
 
   return (
     <div className={bannerVariants()}>
-      <Image src={activeBanner.url} alt={activeBanner.alt} fill priority />
+      <Image
+        src={activeBanner.url}
+        alt={activeBanner.alt}
+        fill
+        priority
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+      />
     </div>
   );
 }
